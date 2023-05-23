@@ -35,9 +35,11 @@ font-family: 'Roboto Flex', sans-serif;
   --fw-sb: 600;
 
   /* font-sizes */
+  --fs-xs: 10px;
   --fs-sm: 12px;
   --fs-p: 14px;
   --fs-n: 16px;
+  --fs-l: 20px;
   --fs-1: 52px;
   --fs-2: 24px;
   /* --fs-3: calc(var(--fs-g) * 1.5); */
