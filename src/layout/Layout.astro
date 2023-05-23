@@ -3,6 +3,7 @@ import "../styles/style.css";
 import Footer from "../components/Footer.astro";
 import HeaderMobile from "../components/HeaderMobile.astro";
 import NavMobile from "../components/NavMobile.astro";
+import FragtBanner from "../components/FragtBanner.astro";
 const { title } = Astro.props;
 ---
 
@@ -19,7 +20,9 @@ const { title } = Astro.props;
   <body>
     <HeaderMobile />
     <NavMobile />
-    <slot />
-    <Footer />
+    <FragtBanner>
+      <slot />
+      <Footer />
+    </FragtBanner>
   </body>
 </html>
