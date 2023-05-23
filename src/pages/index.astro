@@ -8,25 +8,25 @@ import Layout from "../layout/Layout.astro";
     <div class="splash">
       <h1>Bonsaihjørnet</h1>
       <h2>Hos os har du tid til at fordybe dig</h2>
-      <p>Få naturens skønhed ind i dit hjem med vores eksklusive udvalg af bonsaitræer. Skab fred og harmoni med disse bonsai træer, der udstråler elegance og styrke.</p>
+      <p>Få naturens skønhed ind i dit hjem med vores eksklusive udvalg af bonsaitræer. <br /> Skab fred og harmoni med disse bonsai træer, der udstråler elegance og styrke.</p>
     </div>
     <h1>Velkommen</h1>
     <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
-    <p>Hej og velkommen til Bonsaihjørnet.dk! Vi er bonsai-entusiaster, der simpelthen elsker alt ved bonsai-træer.</p>
+    <p>Hej og velkommen til Bonsaihjørnet.dk! Vi er bonsaientusiaster, der simpelthen elsker alt ved bonsaitræer.</p>
     <div class="tree_speci">
-      <img src="" alt="" />
+      <img src="/img/Elm.webp" alt="Bonsaitræ, Elm" />
       <h1>Elm</h1>
       <h2>"Zelkova Serrata"</h2>
       <p>Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form.</p>
     </div>
     <div class="tree_speci">
-      <img src="" alt="" />
+      <img src="/img/Liguster.webp" alt="Bonsaitræ, Japansk Liguster" />
       <h1>Japansk Liguster</h1>
-      <h2>“Ligustrium japonicum”</h2>
+      <h2>“Ligustrium Japonicum”</h2>
       <p>Har små, mørkegrønne blade og tætte løvmasse og symboliserer skønhed, ro og visdom.</p>
     </div>
     <div class="tree_speci">
-      <img src="" alt="" />
+      <img src="/img/Sarissa.webp" alt="Bonsaitræ, Sarissa" />
       <h1>Sarissa</h1>
       <h2>“Sarcocephalus”</h2>
       <p>Det er kendt for sine smukke, små blade og kompakte vækst og skaber en fornemmelse af elegance og harmoni.</p>
@@ -36,7 +36,7 @@ import Layout from "../layout/Layout.astro";
     <h1>Shop</h1>
     <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
     <p>
-      I vores shop finder du et fantastisk udvalg af bonsai-træer og tilbehør til at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde dig de bedste produkter til at pleje og dyrke dine bonsai-træer, og vi er stolte af at være en
+      I vores shop finder du et fantastisk udvalg af bonsaitræer og tilbehør til at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde dig de bedste produkter til at pleje og dyrke dine bonsaitræer, og vi er stolte af at være en
       pålidelig kilde til bonsai-materialer af høj kvalitet.
     </p>
     <div class="toolcard">
@@ -63,39 +63,95 @@ import Layout from "../layout/Layout.astro";
 
 <style>
   main {
+    position: relative;
+    top: 160px;
+    margin-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* display: grid; */
     /* margin-inline: auto; */
   }
+
   .splash {
+    display: grid;
+    width: 100%;
+    align-content: flex-start;
     background-color: var(--almost-black);
     background-image: url(/img/index_splash.webp);
     background-size: cover;
-    height: 481px;
+    height: 560px;
+    text-align: center;
+    padding-top: var(--space-lg);
+    padding-inline: var(--space-md);
   }
-  .splash p {
-    color: var(--white-text);
+  .splash h1 {
   }
   .splash h2 {
     color: var(--white-text);
+    font-size: var(--fs-l);
+    /* font-size: 19px; */
+    margin-top: var(--space-sm);
+  }
+  .splash p {
+    color: var(--white-text);
+    margin-top: var(--space-sm);
+    max-width: 35ch;
+    justify-self: center;
   }
   h1 {
     color: var(--green);
     font-family: var(--ff-cta);
-    font-weight: 300;
+    font-weight: var(--fw-l);
     font-size: var(--fs-1);
   }
   h2 {
     font-family: var(--ff-cta);
-    font-weight: 300;
+    font-weight: var(--fw-l);
     color: var(--green);
   }
   p {
     font-family: var(--ff-text);
+    font-size: var(--fs-p);
   }
   .space_b {
     display: flex;
     justify-content: space-between;
-    font-weight: 600;
+    font-weight: var(--fw-sb);
     font-size: var(--fs-l);
+  }
+  .splash + h1 {
+    margin-top: var(--space-lg);
+  }
+  h1 + .gren {
+    margin-top: var(--space-xs);
+  }
+  .gren + p {
+    margin-top: var(--space-xs);
+  }
+  h1 {
+    font-size: var(--fs-2);
+  }
+  p,
+  h1,
+  h2 {
+    text-align: center;
+  }
+  p {
+    max-width: 35ch;
+    line-height: 1.6;
+  }
+  .tree_speci {
+    display: grid;
+    justify-items: center;
+    margin-block: var(--space-lg);
+  }
+
+  .dividerline {
+    height: 1px;
+    border-radius: 50px;
+    width: 80%;
+    background-color: #878787;
+    margin-block: var(--space-xl);
   }
 </style>
