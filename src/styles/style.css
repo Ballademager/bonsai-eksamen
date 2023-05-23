@@ -1,15 +1,12 @@
 :root {
   /* colors */
-  --white: #fff;
-  --black: #000000;
-
-  --primary: ;
-  --secondary: ;
-  --tertiary: ;
-  --accent: ;
-  --bright: ;
-  --quiz-bg: ;
-  --quiz-btn: ;
+  --white: #ffffff;
+  --white-tekst: #e2e2e2;
+  --bg-grey: #f4f4f4;
+  --almost-black: #0c0c0d;
+  --green: #6a8c47;
+  --logo-brown: #d2a381;
+  --accent: #f1a008;
 
   /* spaces for margins and paddings */
   --space-xxs: calc(var(--space-sm) * 0.25);
@@ -21,13 +18,21 @@
   --space-xxl: calc(var(--space-sm) * 6);
 
   /* font-families */
-  --ff-text: ;
-  --ff-head: ;
+  --ff-head: "Roboto Flex", sans-serif;
+  --ff-text: "Red Hat Display", sans-serif;
+  --ff-cta: "Raleway", sans-serif;
+
+  /*
+font-family: 'Raleway', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Roboto Flex', sans-serif;
+*/
 
   /* font-weights */
+  --fw-l: 300;
   --fw-n: 400;
-  --fw-m: 600;
-  --fw-b: 800;
+  --fw-m: 500;
+  --fw-sb: 600;
 
   /* font-sizes */
   --fs-n: 16px;
@@ -66,6 +71,37 @@ ol {
 }
 
 /* imports */
+
+@font-face {
+  font-family: "Raleway";
+  src: url(/public/fonts/Raleway-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(/public/fonts/Raleway-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(/public/fonts/RedHatDisplay-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(/public/fonts/RedHatDisplay-SemiBold.ttf);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Roboto Flex";
+  src: url(/public/fonts/RobotoFlex-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
 
 /* @font-face {
   font-family: "open_sans";
