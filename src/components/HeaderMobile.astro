@@ -8,79 +8,62 @@
     </div>
   </div>
   <a href="/"><img class="logo" src="/img/logo.png" alt="" /></a>
-  <img class="kurv" src="/img/mobile_header_kurv.png" alt="" />
+  <img class="kurv" src="/img/mobile_header_kurv.svg" alt="" />
 </section>
 <script src="../scripts/burger.js"></script>
 
 <style>
   section {
     padding-top: 71px;
-    padding-bottom: %;
+    padding-bottom: 14px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-image: url(/img/header_index_splash.webp);
     height: 144px;
+    width: 100%;
     background-size: cover;
+    position: fixed;
   }
 
   a {
-    width: 12%;
+    width: 50px;
   }
 
   .kurv {
-    width: 9%;
+    width: 44px;
     cursor: pointer;
   }
 
-  /*ryd op!*/
   .burger {
     position: relative;
     z-index: 90;
     display: block;
-    /* width: 4rem; */
-    width: 2.2rem;
-    padding: 0;
     cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
   }
   .burger .bar,
   .burger::before,
   .burger::after {
     content: "";
     display: block;
-    width: 100%;
+    width: 30px;
     height: 2px;
     border-radius: 5px;
     background-color: var(--white-text);
-    /* margin: 0 0 11px 0px; */
     margin: 0 0 8px 0px;
     transition: 0.8s;
   }
-  .burger:hover::before,
-  .burger:hover::after,
-  .burger:hover .bar {
-    background-color: var(--button-green);
-  }
+
   .burger::after {
     margin: 0;
   }
   .burger.is-active::before {
-    transform: rotate(45deg) translate(10px, 12px);
-    /* background: var(--button-green); */
+    transform: rotate(45deg) translate(5px, 15px);
   }
   .burger.is-active::after {
-    transform: rotate(-45deg) translate(7px, -11px);
-    /* background: var(--button-green); */
+    transform: rotate(-45deg) translate(0px, -10px);
   }
-  /* .burger.is-active::after {
-    transform: rotate(-45deg) translate(10px, -11px);
-  } */
   .burger.is-active .bar {
     opacity: 0;
-    /* background: blue; */
   }
 </style>
