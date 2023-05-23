@@ -1,0 +1,17 @@
+---
+const { linkto } = Astro.props;
+---
+
+<a href="">{linkto}</a>
+
+<style>
+  a {
+    background-color: var(--accent);
+    color: var(--white);
+    font-family: var(--ff-cta);
+    font-size: var(--fs-n);
+    font-weight: 500;
+    padding-block: 12px;
+    padding-inline: 16px;
+  }
+</style>

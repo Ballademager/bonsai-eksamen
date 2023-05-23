@@ -1,7 +1,7 @@
 :root {
   /* colors */
   --white: #ffffff;
-  --white-tekst: #e2e2e2;
+  --white-text: #e2e2e2;
   --bg-grey: #f4f4f4;
   --almost-black: #0c0c0d;
   --green: #6a8c47;
@@ -67,7 +67,8 @@ img {
 }
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--white);
+  /* color: inherit; */
 }
 ul,
 ol {
