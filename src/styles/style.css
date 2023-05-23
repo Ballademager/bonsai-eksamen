@@ -35,8 +35,9 @@ font-family: 'Roboto Flex', sans-serif;
   --fw-sb: 600;
 
   /* font-sizes */
-  --fs-n: 16px;
+  --fs-sm: 12px;
   --fs-p: 14px;
+  --fs-n: 16px;
   --fs-1: 52px;
   --fs-2: 24px;
   /* --fs-3: calc(var(--fs-g) * 1.5); */
@@ -64,6 +65,7 @@ img {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul,
 ol {
@@ -74,31 +76,31 @@ ol {
 
 @font-face {
   font-family: "Raleway";
-  src: url(/public/fonts/Raleway-Light.ttf);
+  src: url(/fonts/Raleway-Light.ttf);
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Raleway";
-  src: url(/public/fonts/Raleway-Medium.ttf);
+  src: url(/fonts/Raleway-Medium.ttf);
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Red Hat Display";
-  src: url(/public/fonts/RedHatDisplay-Light.ttf);
+  src: url(/fonts/RedHatDisplay-Light.ttf);
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Red Hat Display";
-  src: url(/public/fonts/RedHatDisplay-SemiBold.ttf);
+  src: url(/fonts/RedHatDisplay-SemiBold.ttf);
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
   font-family: "Roboto Flex";
-  src: url(/public/fonts/RobotoFlex-Regular.ttf);
+  src: url(/fonts/RobotoFlex-Regular.ttf);
   font-style: normal;
   font-weight: 400;
 }

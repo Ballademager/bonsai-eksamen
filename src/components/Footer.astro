@@ -1,0 +1,69 @@
+---
+---
+
+<footer>
+  <div class="foot_1">
+    <a href="">Hjem</a><a href="">Shop</a><a href="">Handelsbetingelser</a><a href="">Facebook</a>
+  </div>
+  <div class="foot_2">
+    <div>
+      <img src="/img/location.svg" alt="" />
+      <p>Ålekistevej 63, 2720 Vanløse</p>
+    </div>
+    <div>
+      <img src="/img/phone.svg" alt="" />
+      <p>50548062</p>
+      <p>(kun i butikkens åbningstider</p>
+    </div>
+    <div>
+      <img src="/img/mail.svg" alt="" />
+      <p>info@bonsaihjoernet.dk</p>
+    </div>
+  </div>
+  <div class="foot_3">
+    <p>Åbningstider</p>
+    <p>Tirsdag-Fredag: 15-18</p>
+    <p>Lørdag: 12-15</p>
+  </div>
+  <p class="designers">Designed by Grønne, Grønborg og Lindberg</p>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--almost-black);
+    background-image: url(/img/footer_chalk.webp);
+    color: var(--white-tekst);
+    font-family: var(--ff-text);
+    font-weight: 400;
+    font-size: var(--fs-sm);
+  }
+
+  footer > * > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer > div {
+    margin-top: var(--space-md);
+  }
+  /* footer div > * {
+    margin-top: var(--space-xxs);
+  }
+  footer div > :not(p + img) {
+    margin-top: 0;
+  } */
+  footer div:not(:has(img)) > * {
+    margin-top: var(--space-xxs);
+  }
+  .foot_3 {
+    margin-bottom: var(--space-md);
+  }
+  .designers {
+    font-size: 10px;
+    color: #c1ac93;
+    opacity: 60%;
+  }
+</style>
