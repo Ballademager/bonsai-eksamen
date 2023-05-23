@@ -6,24 +6,27 @@
   <a href="/shop">SHOP</a>
   <a href="/omOs">OM OS</a>
   <a href="/line-up">KONTAKT</a>
+  <img src="/img/burger_bg.webp" alt="" />
 </nav>
+
 <script src="../scripts/burger.js"></script>
 
 <style>
   nav {
-    display: block;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
     position: fixed;
     z-index: 16;
-    top: 144px;
+    margin-top: 144px;
+    /* top: 144px; */
     left: -100%;
-    height: 645px;
+    height: 100%;
     width: 100%;
-    height: 700px;
-    background: var(--bg-pink);
-    padding-top: 7.5rem;
+    padding-top: 5.5rem;
     transition: 1s;
-    background-image: url(/img/burger_bg.png);
-    background-position: center;
+    /* background-image: url(/img/burger_bg.webp); */
+    /* background-position: center; */
   }
   nav.is-active {
     left: 0;
@@ -41,5 +44,24 @@
     text-align: center;
     transition: 0.3s ease-in-out;
     line-height: 4rem;
+  }
+
+  img {
+    position: absolute;
+    width: 65%;
+    align-self: center;
+    bottom: 14%;
+  }
+
+  @media (max-width: 375px) {
+    img {
+      width: 52%;
+      bottom: 17%;
+    }
+  }
+  @media (min-width: 810px) {
+    img {
+      bottom: 10%;
+    }
   }
 </style>
