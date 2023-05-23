@@ -1,0 +1,85 @@
+---
+---
+
+<section>
+  <div class="menu_container">
+    <div class="burger">
+      <div class="bar"></div>
+    </div>
+  </div>
+  <a href="/"><img class="logo" src="/img/logo.png" alt="" /></a>
+  <img class="kurv" src="/img/mobile_header_kurv.png" alt="" />
+</section>
+<script src="../scripts/burger.js"></script>
+
+<style>
+  section {
+    padding-top: 71px;
+    padding-bottom: %;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(/img/mobile_header_index_chalk.png);
+    background-size: cover;
+  }
+
+  a {
+    width: 12%;
+  }
+
+  .kurv {
+    width: 9%;
+    cursor: pointer;
+  }
+
+  /*ryd op!*/
+  .burger {
+    position: relative;
+    z-index: 90;
+    display: block;
+    /* width: 4rem; */
+    width: 2.2rem;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  .burger .bar,
+  .burger::before,
+  .burger::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--white-tekst);
+    /* margin: 0 0 11px 0px; */
+    margin: 0 0 8px 0px;
+    transition: 0.8s;
+  }
+  .burger:hover::before,
+  .burger:hover::after,
+  .burger:hover .bar {
+    background-color: var(--button-green);
+  }
+  .burger::after {
+    margin: 0;
+  }
+  .burger.is-active::before {
+    transform: rotate(45deg) translate(10px, 12px);
+    /* background: var(--button-green); */
+  }
+  .burger.is-active::after {
+    transform: rotate(-45deg) translate(7px, -11px);
+    /* background: var(--button-green); */
+  }
+  /* .burger.is-active::after {
+    transform: rotate(-45deg) translate(10px, -11px);
+  } */
+  .burger.is-active .bar {
+    opacity: 0;
+    /* background: blue; */
+  }
+</style>
