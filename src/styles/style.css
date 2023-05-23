@@ -41,7 +41,8 @@ font-family: 'Roboto Flex', sans-serif;
   --fs-n: 16px;
   --fs-l: 20px;
   --fs-1: 52px;
-  --fs-2: 24px;
+  --fs-2: 40px;
+  --fs-3: 24px;
   /* --fs-3: calc(var(--fs-g) * 1.5); */
 
   /* border-radii */
