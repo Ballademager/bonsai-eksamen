@@ -1,0 +1,116 @@
+---
+import Layout from "../layout/Layout.astro";
+---
+
+<Layout title="Bonsaihjørnet">
+  <main>
+    <section class="section">
+      <h1>Shop</h1>
+      <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
+    </section>
+    <section class="section2">
+      <a href="/bonsaitrees"><div class="firstbox"></div></a>
+      <div class="split">
+        <div class="secondbox"></div><div class="thirdbox"></div>
+      </div>
+      <div class="split2">
+        <div class="fourthbox"></div>
+        <div class="fifthbox"></div>
+      </div>
+      <div class="sixthbox"></div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    position: relative;
+    top: 160px;
+    padding-bottom: 55px;
+    margin-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    padding-top: 28px;
+    padding-bottom: 50px;
+  }
+  h1 {
+    color: var(--green);
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-l);
+    font-size: var(--fs-1);
+  }
+  .section2 {
+    display: grid;
+    grid-template-rows: 1.2fr 1fr 1fr 0.8fr;
+    width: 80%;
+    /* justify-content: center; */
+  }
+
+  .firstbox {
+    width: 100%;
+    height: 98%;
+    background-image: url(/img/shop_bonsaitrees.webp);
+    background-size: cover;
+    grid-row: 1;
+    /* margin-bottom: 5px; */
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2;
+  }
+
+  .secondbox {
+    width: 98%;
+    height: 96%;
+    background-color: rgb(72, 72, 179);
+    grid-column: 1;
+    align-self: center;
+  }
+
+  .thirdbox {
+    width: 98%;
+    height: 96%;
+    background-color: rgb(72, 179, 140);
+    grid-column: 2;
+    justify-self: flex-end;
+    align-self: center;
+  }
+
+  .split2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 3;
+  }
+
+  .fourthbox {
+    width: 98%;
+    height: 96%;
+    background-color: rgb(179, 140, 72);
+    grid-column: 1;
+    align-self: center;
+  }
+
+  .fifthbox {
+    width: 98%;
+    height: 96%;
+    background-color: rgb(142, 72, 179);
+    grid-column: 2;
+    justify-self: flex-end;
+    align-self: center;
+  }
+
+  .sixthbox {
+    width: 100%;
+    height: 130px;
+    margin-top: 3px;
+    background-color: rgb(179, 81, 72);
+    grid-row: 4;
+    justify-self: flex-end;
+  }
+</style>
