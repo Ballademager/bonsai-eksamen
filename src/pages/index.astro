@@ -1,7 +1,123 @@
 ---
+import FragtBanner from "../components/FragtBanner.astro";
+import OrangeButton from "../components/OrangeButton.astro";
 import Layout from "../layout/Layout.astro";
 ---
 
 <Layout title="Bonsaihjørnet">
-  <main></main>
+  <main>
+    <div class="splash">
+      <h1>Bonsaihjørnet</h1>
+      <h2>Hos os har du tid til at fordybe dig</h2>
+      <p>
+        Få naturens skønhed ind i dit hjem med vores eksklusive udvalg af
+        bonsaitræer. Skab fred og harmoni med disse bonsai træer, der udstråler
+        elegance og styrke.
+      </p>
+      <img src="/img/index_splash.webp" alt="" />
+    </div>
+    <FragtBanner />
+    <h1>Velkommen</h1>
+    <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
+    <p>
+      Hej og velkommen til Bonsaihjørnet.dk! Vi er bonsai-entusiaster, der
+      simpelthen elsker alt ved bonsai-træer.
+    </p>
+    <div class="tree_speci">
+      <img src="" alt="" />
+      <h1>Elm</h1>
+      <h2>"Zelkova Serrata"</h2>
+      <p>
+        Beundret for deres æstetik, der giver en fornemmelse af styrke og
+        harmoni i en kompakt form.
+      </p>
+    </div>
+    <div class="tree_speci">
+      <img src="" alt="" />
+      <h1>Japansk Liguster</h1>
+      <h2>“Ligustrium japonicum”</h2>
+      <p>
+        Har små, mørkegrønne blade og tætte løvmasse og symboliserer skønhed, ro
+        og visdom.
+      </p>
+    </div>
+    <div class="tree_speci">
+      <img src="" alt="" />
+      <h1>Sarissa</h1>
+      <h2>“Sarcocephalus”</h2>
+      <p>
+        Det er kendt for sine smukke, små blade og kompakte vækst og skaber en
+        fornemmelse af elegance og harmoni.
+      </p>
+    </div>
+    <OrangeButton linkto="BONSAITRÆER" />
+    <div class="dividerline"></div>
+    <h1>Shop</h1>
+    <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
+    <p>
+      I vores shop finder du et fantastisk udvalg af bonsai-træer og tilbehør
+      til at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde
+      dig de bedste produkter til at pleje og dyrke dine bonsai-træer, og vi er
+      stolte af at være en pålidelig kilde til bonsai-materialer af høj
+      kvalitet.
+    </p>
+    <div class="toolcard">
+      <img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" />
+      <p class="space_b"><span>Bonsaiskål</span><span>Pris 169,-</span></p>
+      <p>Sort plettet bonsaiskål med huller i bunden</p>
+    </div>
+    <div class="toolcard">
+      <img src="/img/saks_1.webp" alt="Billede af en saks" />
+      <p class="space_b"><span>Bonsaisaks</span><span>Pris 349,-</span></p>
+      <p>
+        Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det
+        grønne.
+      </p>
+    </div>
+    <div class="toolcard">
+      <p class="space_b"><span></span><span></span></p>
+      <p></p>
+    </div>
+    <div class="toolcard">
+      <p class="space_b"><span></span><span></span></p>
+      <p></p>
+    </div>
+    <OrangeButton linkto="SHOP" />
+  </main>
 </Layout>
+
+<style>
+  main {
+    /* display: grid; */
+    /* margin-inline: auto; */
+  }
+  .splash {
+    background-color: var(--almost-black);
+  }
+  .splash p {
+    color: var(--white-text);
+  }
+  .splash h2 {
+    color: var(--white-text);
+  }
+  h1 {
+    color: var(--green);
+    font-family: var(--ff-cta);
+    font-weight: 300;
+    font-size: var(--fs-1);
+  }
+  h2 {
+    font-family: var(--ff-cta);
+    font-weight: 300;
+    color: var(--green);
+  }
+  p {
+    font-family: var(--ff-text);
+  }
+  .space_b {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: var(--fs-l);
+  }
+</style>
