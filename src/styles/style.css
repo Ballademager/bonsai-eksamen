@@ -34,15 +34,24 @@ font-family: 'Roboto Flex', sans-serif;
   --fw-m: 500;
   --fw-sb: 600;
 
-  /* font-sizes */
+  /* font-sizes mobile*/
+  --fs-1: 52px;
+  --fs-2: 36px;
+  --fs-3: 26px;
+  --fs-4: 19px;
+
+  --fs-p: 13px;
   --fs-xs: 10px;
+
   --fs-sm: 12px;
-  --fs-p: 14px;
   --fs-n: 16px;
   --fs-l: 20px;
-  --fs-1: 52px;
-  --fs-2: 40px;
-  --fs-3: 24px;
+
+  /* font-sizes web*/
+  --fs-4w: 36px;
+  --fs-3w: 50px;
+  --fs-2w: 80px;
+  --fs-1w: 170px;
   /* --fs-3: calc(var(--fs-g) * 1.5); */
 
   /* border-radii */
