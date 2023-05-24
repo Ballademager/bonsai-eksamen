@@ -9,9 +9,13 @@ import Layout from "../layout/Layout.astro";
       <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
     </section>
     <section class="section2">
-      <a href="/bonsaitrees"><div class="firstbox"></div></a>
+      <a href="/bonsaitrees"
+        ><div class="firstbox"><h2>Bonsai træer</h2></div></a
+      >
       <div class="split">
-        <div class="secondbox"></div><div class="thirdbox"></div>
+        <div class="secondbox"><h2>Bonsai skåle</h2></div><div class="thirdbox">
+          <h2>Redskaber</h2>
+        </div>
       </div>
       <div class="split2">
         <div class="fourthbox"></div>
@@ -25,8 +29,7 @@ import Layout from "../layout/Layout.astro";
 <style>
   main {
     position: relative;
-    padding-bottom: 55px;
-    margin-bottom: 160px;
+    padding-bottom: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,13 +57,53 @@ import Layout from "../layout/Layout.astro";
   }
 
   .firstbox {
+    position: relative;
     width: 350px;
     height: 190px;
-    margin-bottom: 4px;
-    background-image: url(/img/shop_bonsaitrees.webp);
+    margin-bottom: 8px;
+    background-image: url(/img/shop_bonsaitree.webp);
     background-size: cover;
     grid-row: 1;
     /* margin-bottom: 5px; */
+  }
+
+  .firstbox h2 {
+    position: absolute;
+    background-color: #00000062;
+    box-shadow: 0 0 8px 8px #00000062;
+    top: 85px;
+    left: 100px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 100%;
+    color: var(--white-text);
+  }
+
+  .secondbox h2 {
+    position: absolute;
+    background-color: #00000062;
+    box-shadow: 0 0 8px 8px #00000062;
+    top: 85px;
+    left: 10px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 100%;
+    color: var(--white-text);
+  }
+
+  .thirdbox h2 {
+    position: absolute;
+    background-color: #00000062;
+    box-shadow: 0 0 8px 8px #00000062;
+    top: 85px;
+    left: 20px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 100%;
+    color: var(--white-text);
   }
 
   .split {
@@ -70,20 +113,23 @@ import Layout from "../layout/Layout.astro";
   }
 
   .secondbox {
-    width: 169px;
+    position: relative;
+    width: 166px;
     height: 180px;
-    background-color: rgb(72, 72, 179);
     grid-column: 1;
     align-self: center;
+    background-image: url(/img/shop_bonsaibowl.webp);
+    background-size: cover;
   }
 
   .thirdbox {
-    width: 169px;
+    width: 166px;
     height: 180px;
     background-color: rgb(72, 179, 140);
     grid-column: 2;
     justify-self: flex-end;
     align-self: center;
+    position: relative;
   }
 
   .split2 {
@@ -93,7 +139,7 @@ import Layout from "../layout/Layout.astro";
   }
 
   .fourthbox {
-    width: 169px;
+    width: 166px;
     height: 180px;
     background-color: rgb(179, 140, 72);
     grid-column: 1;
@@ -101,7 +147,7 @@ import Layout from "../layout/Layout.astro";
   }
 
   .fifthbox {
-    width: 169px;
+    width: 166px;
     height: 180px;
     background-color: rgb(142, 72, 179);
     grid-column: 2;
@@ -112,7 +158,7 @@ import Layout from "../layout/Layout.astro";
   .sixthbox {
     width: 350px;
     height: 160px;
-    margin-top: 4px;
+    margin-top: 8px;
     background-color: rgb(179, 81, 72);
     grid-row: 4;
     justify-self: flex-end;
@@ -123,7 +169,8 @@ import Layout from "../layout/Layout.astro";
     .thirdbox,
     .fourthbox,
     .fifthbox {
-      width: 245px;
+      width: 240px;
+      height: 178px;
     }
     .firstbox,
     .sixthbox {
@@ -136,38 +183,46 @@ import Layout from "../layout/Layout.astro";
     .thirdbox,
     .fourthbox,
     .fifthbox {
-      width: 310px;
+      width: 295px;
       height: 300px;
     }
 
+    .section {
+      padding-bottom: 80px;
+    }
+    main {
+      padding-top: 45px;
+      margin-bottom: -200px;
+    }
     .firstbox {
       width: 950px;
       height: 300px;
+      margin-bottom: 18px;
     }
 
     .thirdbox {
       position: relative;
       justify-self: flex-start;
-      left: -155px;
+      left: -148px;
     }
 
     .fourthbox {
       position: relative;
-      top: -304px;
-      left: 640px;
+      top: -318px;
+      left: 655px;
     }
 
     .fifthbox {
       position: relative;
-      left: -640px;
-      top: 4px;
+      left: -655px;
+      top: 12px;
     }
 
     .sixthbox {
       position: relative;
-      width: 630px;
+      width: 623px;
       height: 300px;
-      top: -302px;
+      top: -305px;
     }
   }
 </style>
