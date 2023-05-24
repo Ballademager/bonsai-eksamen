@@ -48,9 +48,9 @@ font-family: 'Roboto Flex', sans-serif;
   --fs-l: 20px;
 
   /* font-sizes web*/
-  --fs-4w: 36px;
-  --fs-3w: 50px;
-  --fs-2w: 60px;
+  --fs-4w: 20px;
+  --fs-3w: 32px;
+  --fs-2w: 70px;
   --fs-1w: 110px;
   /* --fs-3: calc(var(--fs-g) * 1.5); */
 
