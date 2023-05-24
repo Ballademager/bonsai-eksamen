@@ -14,19 +14,19 @@ import Layout from "../layout/Layout.astro";
     <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
     <p>Hej og velkommen til Bonsaihjørnet.dk! Vi er bonsaientusiaster, der simpelthen elsker alt ved bonsaitræer.</p>
     <div class="tree_speci">
-      <img src="/img/Elm.webp" alt="Bonsaitræ, Elm" />
+      <img src="/img/elm.webp" alt="Bonsaitræ, Elm" />
       <h3>Elm</h3>
       <h4>"Zelkova Serrata"</h4>
       <p>Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form.</p>
     </div>
     <div class="tree_speci">
-      <img src="/img/Liguster.webp" alt="Bonsaitræ, Japansk Liguster" />
+      <img src="/img/liguster.webp" alt="Bonsaitræ, Japansk Liguster" />
       <h3>Japansk Liguster</h3>
       <h4>“Ligustrium Japonicum”</h4>
       <p>Har små, mørkegrønne blade og tætte løvmasse og symboliserer skønhed, ro og visdom.</p>
     </div>
     <div class="tree_speci">
-      <img src="/img/Sarissa.webp" alt="Bonsaitræ, Sarissa" />
+      <img src="/img/sarissa.webp" alt="Bonsaitræ, Sarissa" />
       <h3>Sarissa</h3>
       <h4>“Sarcocephalus”</h4>
       <p>Det er kendt for sine smukke, små blade og kompakte vækst og skaber en fornemmelse af elegance og harmoni.</p>
@@ -42,20 +42,22 @@ import Layout from "../layout/Layout.astro";
     <div class="toolcard">
       <img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" />
       <div class="space_b"><h3 class="space_b">Bonsaiskål</h3><span>Pris 169,-</span></div>
-      <p>Sort plettet bonsaiskål med huller i bunden</p>
+      <p>Sort plettet bonsaiskål med huller i bunden. Fås i flere størrelser.</p>
     </div>
     <div class="toolcard">
-      <img src="/img/saks_1.webp" alt="Billede af en saks" />
+      <img src="/img/saks_1.webp" alt="Billede af en bonsaisaks" />
       <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 349,-</span></div>
       <p>Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det grønne.</p>
     </div>
     <div class="toolcard">
-      <div class="space_b"><h3 class="space_b"></h3><span></span></div>
-      <p></p>
+      <img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" />
+      <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span></div>
+      <p>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</p>
     </div>
     <div class="toolcard">
-      <div class="space_b"><h3 class="space_b"></h3><span></span></div>
-      <p></p>
+      <img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" />
+      <div class="space_b"><h3 class="space_b">Bonsaiskål</h3><span>Pris 239,-</span></div>
+      <p>Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.</p>
     </div>
     <OrangeButton linkto="SHOP" />
   </main>
@@ -66,6 +68,7 @@ import Layout from "../layout/Layout.astro";
     position: relative;
     top: 160px;
     margin-bottom: 160px;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,19 +131,6 @@ import Layout from "../layout/Layout.astro";
     max-width: 33ch;
     line-height: 1.6;
   }
-  .space_b {
-    display: flex;
-    justify-content: space-between;
-    font-weight: var(--fw-l);
-    font-size: var(--fs-l);
-    font-family: var(--ff-cta);
-
-    /* color: var(--almost-black); */
-  }
-  .space_b span {
-    font-weight: var(--fw-m);
-    color: var(--green);
-  }
   .splash + h1 {
     margin-top: var(--space-lg);
   }
@@ -161,7 +151,35 @@ import Layout from "../layout/Layout.astro";
     justify-items: center;
     margin-block: var(--space-lg);
   }
-
+  .tree_speci img {
+    width: 75vw;
+  }
+  .toolcard div {
+    margin-top: var(--space-xs);
+  }
+  .toolcard {
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+  }
+  .space_b {
+    display: flex;
+    justify-content: space-between;
+    font-weight: var(--fw-l);
+    font-size: var(--fs-l);
+    font-family: var(--ff-cta);
+    padding-inline: var(--space-xs);
+  }
+  .toolcard p {
+    margin-top: var(--space-sm);
+  }
+  .toolcard:last-of-type {
+    margin-bottom: var(--space-xl);
+  }
+  .space_b span {
+    font-weight: var(--fw-m);
+    color: var(--green);
+  }
   .dividerline {
     height: 1px;
     border-radius: 50px;
