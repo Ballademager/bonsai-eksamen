@@ -88,7 +88,8 @@ import Layout from "../layout/Layout.astro";
     background-color: var(--almost-black);
     background-image: url(/img/index_splash.webp);
     background-size: cover;
-    height: 560px;
+    aspect-ratio: 393/560;
+    /* height: 560px; */
     text-align: center;
     padding-top: var(--space-lg);
     padding-inline: var(--space-md);
@@ -191,5 +192,25 @@ import Layout from "../layout/Layout.astro";
     width: 80%;
     background-color: #878787;
     margin-top: var(--space-lg);
+  }
+  @media (min-width: 750px) {
+    .splash {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      max-width: 100%;
+      /* align-content: flex-start; */
+      background-image: url(/img/splash_web.webp);
+      aspect-ratio: 1728/1031;
+      height: auto;
+      text-align: center;
+      padding-top: var(--space-lg);
+      padding-inline: var(--space-md);
+    }
+
+    h1 {
+      font-size: var(--fs-1w);
+      justify-self: end;
+      align-self: end;
+    }
   }
 </style>
