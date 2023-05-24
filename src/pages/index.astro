@@ -377,4 +377,49 @@ import Layout from "../layout/Layout.astro";
       width: 50%;
     }
   }
+  @media (500px < width < 750px) {
+    main {
+      /* top: -200px; */
+    }
+
+    .tree_speci img {
+      width: 80vw;
+    }
+
+    p {
+      max-width: 75vw;
+    }
+    .tree_speci p {
+      text-align: left;
+    }
+    .tree_speci :is(h3, h4, p) {
+      margin-inline: var(--space-xs);
+    }
+    .shop_section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .toolcard {
+      width: 65vw;
+    }
+    .toolcard p {
+      text-align: start;
+    }
+    .splash {
+      padding-top: min(8vw, var(--space-xxl));
+      padding-left: var(--space-xxl);
+      background-image: url(/img/splash_500-750.webp);
+    }
+    .splash h1 {
+      font-size: calc(var(--fs-1) + 2vw);
+    }
+    .splash h2 {
+      font-size: calc(var(--fs-4) + 0.5vw);
+    }
+    .splash p {
+      font-size: calc(var(--fs-p) + 0.25vw);
+      max-width: 35ch;
+    }
+  }
 </style>
