@@ -51,7 +51,7 @@ import Layout from "../layout/Layout.astro";
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 350px;
-    /* justify-content: center; */
+    justify-content: center;
   }
 
   .firstbox {
@@ -117,5 +117,58 @@ import Layout from "../layout/Layout.astro";
     background-color: rgb(179, 81, 72);
     grid-row: 4;
     justify-self: flex-end;
+  }
+
+  @media (min-width: 550px) {
+    .secondbox,
+    .thirdbox,
+    .fourthbox,
+    .fifthbox {
+      width: 245px;
+    }
+    .firstbox,
+    .sixthbox {
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .secondbox,
+    .thirdbox,
+    .fourthbox,
+    .fifthbox {
+      width: 310px;
+      height: 300px;
+    }
+
+    .firstbox {
+      width: 950px;
+      height: 300px;
+    }
+
+    .thirdbox {
+      position: relative;
+      justify-self: flex-start;
+      left: -155px;
+    }
+
+    .fourthbox {
+      position: relative;
+      top: -304px;
+      left: 640px;
+    }
+
+    .fifthbox {
+      position: relative;
+      left: -640px;
+      top: 4px;
+    }
+
+    .sixthbox {
+      position: relative;
+      width: 630px;
+      height: 300px;
+      top: -302px;
+    }
   }
 </style>
