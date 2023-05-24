@@ -16,25 +16,27 @@ import Layout from "../layout/Layout.astro";
     <h2 id="velkommen">Velkommen</h2>
     <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
     <p>Hej og velkommen til Bonsaihjørnet.dk! Opdag skønheden i bonsai-træer hos os. Vi tilbyder et udvalg af unikke bonsaitræer der bringer naturens skønhed og harmoni ind i dit hjem eller kontor.</p>
-    <div class="tree_speci">
-      <img src="/img/elm.webp" alt="Bonsaitræ, Elm" />
-      <h3>Elm</h3>
-      <h4>"Zelkova Serrata"</h4>
-      <p>Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form.</p>
-    </div>
-    <div class="tree_speci">
-      <img src="/img/liguster.webp" alt="Bonsaitræ, Japansk Liguster" />
-      <h3>Japansk Liguster</h3>
-      <h4>“Ligustrium Japonicum”</h4>
-      <p>Har små, mørkegrønne blade og tætte løvmasse og symboliserer skønhed, ro og visdom.</p>
-    </div>
-    <div class="tree_speci">
-      <img src="/img/sarissa.webp" alt="Bonsaitræ, Sarissa" />
-      <h3>Sarissa</h3>
-      <h4>“Sarcocephalus”</h4>
-      <p>Det er kendt for sine smukke, små blade og kompakte vækst og skaber en fornemmelse af elegance og harmoni.</p>
-    </div>
-    <OrangeButton linkto="BONSAITRÆER" />
+    <section class="tree_section">
+      <div class="tree_speci">
+        <img src="/img/elm.webp" alt="Bonsaitræ, Elm" />
+        <h3>Elm</h3>
+        <h4>"Zelkova Serrata"</h4>
+        <p>Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form.</p>
+      </div>
+      <div class="tree_speci">
+        <img src="/img/liguster.webp" alt="Bonsaitræ, Japansk Liguster" />
+        <h3>Japansk Liguster</h3>
+        <h4>“Ligustrium Japonicum”</h4>
+        <p>Har små, mørkegrønne blade og tætte løvmasse og symboliserer skønhed, ro og visdom.</p>
+      </div>
+      <div class="tree_speci">
+        <img src="/img/sarissa.webp" alt="Bonsaitræ, Sarissa" />
+        <h3>Sarissa</h3>
+        <h4>“Sarcocephalus”</h4>
+        <p>Det er kendt for sine smukke, små blade og kompakte vækst og skaber en fornemmelse af elegance og harmoni.</p>
+      </div>
+    </section>
+    <OrangeButton link="/bonsaitrees/" linktext="BONSAITRÆER" />
     <div class="dividerline"></div>
     <h2>Shop</h2>
     <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
@@ -42,31 +44,33 @@ import Layout from "../layout/Layout.astro";
       I vores shop finder du et fantastisk udvalg af bonsaitræer og tilbehør til at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde dig de bedste produkter til at pleje og dyrke dine bonsaitræer, og vi er stolte af at være en
       pålidelig kilde til bonsai-materialer af høj kvalitet.
     </p>
-    <div class="toolcard">
-      <img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" />
-      <div class="space_b">
-        <h3 class="space_b">Bonsaiskål</h3><span>Pris 169,-</span>
+    <section class="shop_section">
+      <div class="toolcard">
+        <img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" />
+        <div class="space_b">
+          <h3 class="space_b">Bonsaiskål</h3><span>Pris 169,-</span>
+        </div>
+        <p>Sort plettet bonsaiskål med huller i bunden</p>
       </div>
-      <p>Sort plettet bonsaiskål med huller i bunden</p>
-    </div>
-    <div class="toolcard">
-      <img src="/img/saks_1.webp" alt="Billede af en saks" />
-      <div class="space_b">
-        <h3 class="space_b">Bonsaisaks</h3><span>Pris 349,-</span>
+      <div class="toolcard">
+        <img src="/img/saks_1.webp" alt="Billede af en saks" />
+        <div class="space_b">
+          <h3 class="space_b">Bonsaisaks</h3><span>Pris 349,-</span>
+        </div>
+        <p>Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det grønne.</p>
       </div>
-      <p>Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det grønne.</p>
-    </div>
-    <div class="toolcard">
-      <img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" />
-      <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span></div>
-      <p>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</p>
-    </div>
-    <div class="toolcard">
-      <img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" />
-      <div class="space_b"><h3 class="space_b">Bonsaiskål</h3><span>Pris 239,-</span></div>
-      <p>Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.</p>
-    </div>
-    <OrangeButton linkto="SHOP" />
+      <div class="toolcard">
+        <img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" />
+        <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span></div>
+        <p>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</p>
+      </div>
+      <div class="toolcard">
+        <img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" />
+        <div class="space_b"><h3 class="space_b">Bonsaiskål</h3><span>Pris 239,-</span></div>
+        <p>Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.</p>
+      </div>
+    </section>
+    <OrangeButton link="/shop/" linktext="SHOP" />
   </main>
 </Layout>
 
@@ -201,7 +205,7 @@ import Layout from "../layout/Layout.astro";
     .splash {
       position: relative;
       display: grid;
-      grid-template-columns: 1fr 60%;
+      grid-template-columns: 1fr 65%;
       /* grid-template-rows: 1fr 2fr; */
       max-width: 100%;
       /* align-content: flex-start; */
@@ -217,7 +221,7 @@ import Layout from "../layout/Layout.astro";
       text-align: start;
       grid-column: 2;
       justify-self: start;
-      margin-left: 10%;
+      margin-left: 15%;
     }
     .splash h2 {
       font-size: var(--fs-3);
@@ -230,13 +234,12 @@ import Layout from "../layout/Layout.astro";
     }
     main {
       top: 90px;
-      margin-bottom: var(--space-lg);
+      margin-bottom: calc(var(--space-xxl) * 1.7);
     }
     h1 {
       font-size: var(--fs-1w);
       justify-self: start;
       align-self: end;
-      margin-right: 4rem;
       grid-column: 2;
     }
     .pilned {
@@ -246,29 +249,43 @@ import Layout from "../layout/Layout.astro";
       left: 50%;
     }
     h2 {
-      color: var(--green);
-      font-family: var(--ff-cta);
       font-size: var(--fs-2w);
-      font-weight: var(--fw-l);
       margin-top: var(--space-lg);
     }
     h3 {
-      color: var(--green);
-      font-family: var(--ff-cta);
-      font-weight: var(--fw-l);
-      font-size: var(--fs-3);
+      font-size: var(--fs-3w);
     }
     h4 {
-      font-family: var(--ff-cta);
-      font-weight: var(--fw-l);
-      color: var(--green);
-      font-size: var(--fs-4);
+      font-size: var(--fs-4w);
     }
     p {
-      font-family: var(--ff-text);
       font-size: var(--fs-n);
-      max-width: 50ch;
+      max-width: 70ch;
       line-height: 1.6;
+    }
+    .tree_section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-inline: calc(var(--space-xxl) * 1.5);
+      gap: var(--space-xl);
+    }
+    .tree_speci {
+      display: grid;
+      justify-items: start;
+      margin-block: var(--space-lg);
+    }
+    .tree_speci :is(h3, h4) {
+      margin-top: var(--space-xxs);
+    }
+    .tree_speci p {
+      text-align: start;
+      margin-top: var(--space-xs);
+    }
+    .tree_speci :is(p, h3, h4) {
+      margin-inline: var(--space-xs);
+    }
+    .tree_speci img {
+      width: 75vw;
     }
   }
 </style>
