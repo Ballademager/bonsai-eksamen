@@ -11,10 +11,11 @@ import Layout from "../layout/Layout.astro";
       <p>
         Få naturens skønhed ind i dit hjem med vores eksklusive udvalg af bonsaitræer. <br /> Skab fred og harmoni med disse bonsai træer, der udstråler elegance og styrke.
       </p>
+      <a href="#velkommen" class="pilned"><img src="/img/pil.svg" alt="" /></a>
     </div>
-    <h2>Velkommen</h2>
-    <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
-    <p>Hej og velkommen til Bonsaihjørnet.dk! Vi er bonsaientusiaster, der simpelthen elsker alt ved bonsaitræer.</p>
+    <h2 id="velkommen">Velkommen</h2>
+    <img src="/img/gren.webp" alt="figur af bonsaigren" class="gren" />
+    <p>Hej og velkommen til Bonsaihjørnet.dk! Opdag skønheden i bonsai-træer hos os. Vi tilbyder et udvalg af unikke bonsaitræer der bringer naturens skønhed og harmoni ind i dit hjem eller kontor.</p>
     <div class="tree_speci">
       <img src="/img/elm.webp" alt="Bonsaitræ, Elm" />
       <h3>Elm</h3>
@@ -36,7 +37,7 @@ import Layout from "../layout/Layout.astro";
     <OrangeButton linkto="BONSAITRÆER" />
     <div class="dividerline"></div>
     <h2>Shop</h2>
-    <img src="/img/gren_index.webp" alt="figur af bonsaigren" class="gren" />
+    <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
     <p>
       I vores shop finder du et fantastisk udvalg af bonsaitræer og tilbehør til at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde dig de bedste produkter til at pleje og dyrke dine bonsaitræer, og vi er stolte af at være en
       pålidelig kilde til bonsai-materialer af høj kvalitet.
@@ -193,10 +194,14 @@ import Layout from "../layout/Layout.astro";
     background-color: #878787;
     margin-top: var(--space-lg);
   }
+  .pilned {
+    display: none;
+  }
   @media (min-width: 750px) {
     .splash {
+      position: relative;
       display: grid;
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 1fr 60%;
       /* grid-template-rows: 1fr 2fr; */
       max-width: 100%;
       /* align-content: flex-start; */
@@ -212,14 +217,14 @@ import Layout from "../layout/Layout.astro";
       text-align: start;
       grid-column: 2;
       justify-self: start;
-      margin-left: 30%;
+      margin-left: 10%;
     }
     .splash h2 {
       font-size: var(--fs-3);
       margin-top: var(--space-md);
     }
     .splash p {
-      margin-top: var(--space-md);
+      margin-top: var(--space-sm);
       font-size: var(--fs-n);
       max-width: 38ch;
     }
@@ -229,10 +234,41 @@ import Layout from "../layout/Layout.astro";
     }
     h1 {
       font-size: var(--fs-1w);
-      justify-self: end;
+      justify-self: start;
       align-self: end;
       margin-right: 4rem;
       grid-column: 2;
+    }
+    .pilned {
+      position: absolute;
+      display: block;
+      bottom: 2rem;
+      left: 50%;
+    }
+    h2 {
+      color: var(--green);
+      font-family: var(--ff-cta);
+      font-size: var(--fs-2w);
+      font-weight: var(--fw-l);
+      margin-top: var(--space-lg);
+    }
+    h3 {
+      color: var(--green);
+      font-family: var(--ff-cta);
+      font-weight: var(--fw-l);
+      font-size: var(--fs-3);
+    }
+    h4 {
+      font-family: var(--ff-cta);
+      font-weight: var(--fw-l);
+      color: var(--green);
+      font-size: var(--fs-4);
+    }
+    p {
+      font-family: var(--ff-text);
+      font-size: var(--fs-n);
+      max-width: 50ch;
+      line-height: 1.6;
     }
   }
 </style>
