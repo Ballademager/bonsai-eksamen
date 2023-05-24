@@ -14,7 +14,7 @@ import Layout from "../layout/Layout.astro";
       <a href="#velkommen" class="pilned"><img src="/img/pil.svg" alt="" /></a>
     </div>
     <h2 id="velkommen">Velkommen</h2>
-    <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
+    <img class="gren" src="/img/gren.svg" alt="figur af bonsaigren" />
     <p>Hej og velkommen til Bonsaihjørnet.dk! Opdag skønheden i bonsai-træer hos os. Vi tilbyder et udvalg af unikke bonsaitræer der bringer naturens skønhed og harmoni ind i dit hjem eller kontor.</p>
     <section class="tree_section">
       <div class="tree_speci">
@@ -39,7 +39,7 @@ import Layout from "../layout/Layout.astro";
     <OrangeButton link="/bonsaitrees/" linktext="BONSAITRÆER" />
     <div class="dividerline"></div>
     <h2>Shop</h2>
-    <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
+    <img class="gren" src="/img/gren.svg" alt="figur af bonsaigren" />
     <p>
       I vores shop finder du et fantastisk udvalg af bonsaitræer og tilbehør til at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde dig de bedste produkter til at pleje og dyrke dine bonsaitræer, og vi er stolte af at være en
       pålidelig kilde til bonsai-materialer af høj kvalitet.
@@ -60,14 +60,14 @@ import Layout from "../layout/Layout.astro";
         <p>Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det grønne.</p>
       </div>
       <div class="toolcard">
-        <img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" />
-        <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span></div>
-        <p>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</p>
-      </div>
-      <div class="toolcard">
         <img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" />
         <div class="space_b"><h3 class="space_b">Bonsaiskål</h3><span>Pris 239,-</span></div>
         <p>Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.</p>
+      </div>
+      <div class="toolcard">
+        <img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" />
+        <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span></div>
+        <p>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</p>
       </div>
     </section>
     <OrangeButton link="/shop/" linktext="SHOP" />
@@ -81,8 +81,6 @@ import Layout from "../layout/Layout.astro";
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: grid; */
-    /* margin-inline: auto; */
   }
 
   .splash {
@@ -93,7 +91,6 @@ import Layout from "../layout/Layout.astro";
     background-image: url(/img/index_splash.webp);
     background-size: cover;
     aspect-ratio: 393/560;
-    /* height: 560px; */
     text-align: center;
     padding-top: var(--space-lg);
     padding-inline: var(--space-md);
@@ -138,19 +135,13 @@ import Layout from "../layout/Layout.astro";
   p {
     font-family: var(--ff-text);
     font-size: var(--fs-p);
-    max-width: 33ch;
-    line-height: 1.6;
+    /* max-width: 33ch; */
+    line-height: 1.4;
   }
-  .splash + h1 {
-    margin-top: var(--space-lg);
+  .gren {
+    width: 120px;
+    margin-block: var(--space-sm);
   }
-  h1 + .gren {
-    margin-top: var(--space-xs);
-  }
-  .gren + p {
-    margin-top: var(--space-xs);
-  }
-
   p,
   h1,
   h2 {
@@ -169,6 +160,7 @@ import Layout from "../layout/Layout.astro";
   }
   .toolcard {
     margin-top: var(--space-xl);
+    margin-inline: var(--space-xl);
     display: flex;
     flex-direction: column;
   }
@@ -178,10 +170,12 @@ import Layout from "../layout/Layout.astro";
     font-weight: var(--fw-l);
     font-size: var(--fs-l);
     font-family: var(--ff-cta);
-    padding-inline: var(--space-xs);
   }
   .toolcard p {
-    margin-top: var(--space-sm);
+    margin-top: var(--space-xs);
+  }
+  .toolcard :is(p, div) {
+    padding-inline: var(--space-xs);
   }
   .toolcard:last-of-type {
     margin-bottom: var(--space-xl);
@@ -247,6 +241,10 @@ import Layout from "../layout/Layout.astro";
       bottom: 2rem;
       left: 50%;
     }
+    .gren {
+      width: 250px;
+      margin-block: var(--space-md);
+    }
     h2 {
       font-size: var(--fs-2w);
       margin-top: var(--space-xl);
@@ -259,13 +257,18 @@ import Layout from "../layout/Layout.astro";
     }
     p {
       font-size: var(--fs-n);
-      max-width: 70ch;
+      max-width: 85ch;
       line-height: 1.6;
+    }
+    .gren + p {
+      width: min(75ch, 80vw);
+      /* width: clamp(55ch, 80vw, 75ch); */
     }
     .tree_section {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin-inline: calc(var(--space-xxl) * 1.5);
+      margin-bottom: var(--space-lg);
       gap: var(--space-xl);
     }
     .tree_speci {
@@ -285,6 +288,39 @@ import Layout from "../layout/Layout.astro";
     }
     .tree_speci img {
       width: 75vw;
+    }
+    .dividerline {
+      width: 80%;
+      margin-top: calc(var(--space-xl) * 1.5);
+    }
+    .shop_section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-inline: calc(var(--space-xxl) * 1.3);
+      gap: var(--space-xl);
+      margin-bottom: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .toolcard div {
+      margin-top: var(--space-xxs);
+    }
+    .toolcard {
+      margin-inline: 0;
+      margin-top: 0;
+    }
+    .toolcard :is(div, p) {
+      padding-inline: var(--space-xxs);
+      /* display: flex; */
+      /* flex-direction: column; */
+    }
+    /* .space_b {
+      padding-inline: 0;
+    } */
+    .space_b {
+      font-size: var(--fs-l);
+    }
+    .toolcard p {
+      text-align: start;
     }
   }
 </style>
