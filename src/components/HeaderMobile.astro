@@ -11,18 +11,19 @@
     ><img class="logo" src="/img/logo.png" alt="Bonsaihjørnets logo" /></a
   >
   <img class="kurv" src="/img/mobile_header_kurv.svg" alt="Kurven" />
+  <img class="kurv_web" src="/img/header_kurv_web.svg" alt="Kurven" />
 </section>
 <script src="../scripts/burger.js"></script>
 
 <style>
   section {
-    padding-top: 71px;
-    padding-bottom: 14px;
+    padding-top: 15px;
+    padding-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-image: url(/img/header_index_splash.webp);
-    height: 144px;
+    height: 100px;
     width: 100%;
     background-size: cover;
     position: fixed;
@@ -36,6 +37,10 @@
   .kurv {
     width: 44px;
     cursor: pointer;
+  }
+
+  .kurv_web {
+    display: none;
   }
 
   .burger {
@@ -68,5 +73,43 @@
   }
   .burger.is-active .bar {
     opacity: 0;
+  }
+
+  @media (min-width: 700px) {
+    section {
+      padding-top: 0px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 0px;
+      justify-content: space-between;
+      background-image: url(/img/header_index_web.webp);
+      height: 125px;
+    }
+
+    section :nth-child(1) {
+      order: 2;
+    }
+
+    section :nth-child(2) {
+      order: 1;
+    }
+
+    section :nth-child(4) {
+      order: 3;
+    }
+
+    a {
+      width: 80px;
+      align-self: center;
+    }
+
+    .kurv {
+      display: none;
+    }
+    .kurv_web {
+      display: block;
+      width: 115px;
+      height: 38px;
+    }
   }
 </style>
