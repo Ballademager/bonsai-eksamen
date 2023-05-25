@@ -10,10 +10,10 @@ import Layout from "../layout/Layout.astro";
     </section>
     <section class="section2">
       <a href="/bonsaitrees"
-        ><div class="firstbox filter"><h2>Bonsai træer</h2></div></a
+        ><div class="firstbox filter"><h2>Bonsaitræer</h2></div></a
       >
       <div class="split">
-        <div class="secondbox filter"><h2>Bonsai skåle</h2></div>
+        <div class="secondbox filter"><h2>Bonsaiskåle</h2></div>
         <div class="thirdbox filter">
           <h2>Redskaber</h2>
         </div>
@@ -64,7 +64,6 @@ import Layout from "../layout/Layout.astro";
     font-weight: var(--fw-sb);
     text-align: center;
     border-radius: 15px;
-    color: var(--white-text);
   }
   .firstbox,
   .secondbox,
@@ -74,7 +73,7 @@ import Layout from "../layout/Layout.astro";
   .sixthbox {
     background-size: cover;
     position: relative;
-    color: var(--white-text);
+    color: var(--white);
   }
 
   h2 {
@@ -88,9 +87,13 @@ import Layout from "../layout/Layout.astro";
     width: 350px;
     height: 190px;
     margin-bottom: 8px;
+    /* background: url(img/shop_bonsaitree.webp); */
+    background-size: cover;
     background-image: url(/img/shop_bonsaitree.webp);
     grid-row: 1;
+    background-position: center;
   }
+
   .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -123,7 +126,6 @@ import Layout from "../layout/Layout.astro";
     font-weight: var(--fw-sb);
     text-align: center;
     border-radius: 15px;
-    color: var(--white-text);
   }
   .split2 {
     display: grid;
@@ -147,7 +149,6 @@ import Layout from "../layout/Layout.astro";
     font-weight: var(--fw-sb);
     text-align: center;
     border-radius: 15px;
-    color: var(--white-text);
   }
 
   .fifthbox {
@@ -168,7 +169,6 @@ import Layout from "../layout/Layout.astro";
     font-weight: var(--fw-sb);
     text-align: center;
     border-radius: 15px;
-    color: var(--white-text);
   }
   .sixthbox {
     width: 350px;
@@ -206,7 +206,6 @@ import Layout from "../layout/Layout.astro";
     font-weight: var(--fw-sb);
     text-align: center;
     border-radius: 15px;
-    color: var(--white-text);
   }
 
   @media (min-width: 550px) {
@@ -236,9 +235,43 @@ import Layout from "../layout/Layout.astro";
     .fifthbox {
       background-image: url(img/godning.webp);
     }
+
+    .firstbox h2 {
+      left: 170px;
+    }
+    .secondbox h2 {
+      left: 50px;
+    }
+
+    .thirdbox h2 {
+      left: 60px;
+    }
+
+    .fourthbox h2 {
+      left: 90px;
+    }
+
+    .fifthbox h2 {
+      left: 70px;
+    }
+
+    .sixthbox h2 {
+      left: 210px;
+    }
   }
 
   @media (min-width: 1000px) {
+    img {
+      width: 220px;
+    }
+    h1 {
+      font-size: var(--fs-2w);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 45px;
+    }
     .secondbox,
     .thirdbox,
     .fourthbox,
@@ -260,6 +293,34 @@ import Layout from "../layout/Layout.astro";
       margin-bottom: 18px;
     }
 
+    .firstbox h2 {
+      top: 135px;
+      left: 340px;
+    }
+    .secondbox h2 {
+      top: 125px;
+      left: 15px;
+    }
+
+    .thirdbox h2 {
+      top: 125px;
+      left: 30px;
+    }
+
+    .fourthbox h2 {
+      top: 125px;
+      left: 95px;
+    }
+
+    .fifthbox h2 {
+      top: 125px;
+      left: 55px;
+    }
+
+    .sixthbox h2 {
+      top: 125px;
+      left: 220px;
+    }
     .secondbox {
       background-image: url(img/shop_bonsaibowl.webp);
     }
@@ -268,12 +329,14 @@ import Layout from "../layout/Layout.astro";
       position: relative;
       justify-self: flex-start;
       left: -148px;
+      background-image: url(img/tools.webp);
     }
 
     .fourthbox {
       position: relative;
       top: -318px;
       left: 655px;
+      background-image: url(img/jord.webp);
     }
 
     .fifthbox {
