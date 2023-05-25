@@ -1,12 +1,13 @@
 ---
-const { imagesource, imagealt, treetitle, latinname, treedescription } = Astro.props;
+const { data } = Astro.props;
+// const { imagesource, imagealt, treetitle, latinname, treedescription } = Astro.props;
 ---
 
 <div>
-  <img src={imagesource} alt={imagealt} />
-  <h3>{treetitle}</h3>
-  <h4>{latinname}</h4>
-  <p>{treedescription}</p>
+  <img src={data.imgsrc} alt={data.imgalt} />
+  <h3>{data.title}</h3>
+  <h4>{data.latin}</h4>
+  <p>{data.description}</p>
 </div>
 
 <style>
