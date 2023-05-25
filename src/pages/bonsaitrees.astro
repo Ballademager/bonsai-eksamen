@@ -47,6 +47,7 @@ console.log(data);
     font-size: var(--fs-1);
     font-weight: var(--fw-l);
     margin-inline: auto;
+    margin-top: var(--space-md);
   }
   .gren {
     width: 120px;
@@ -64,21 +65,62 @@ console.log(data);
   }
 
   .treesection {
-    margin-top: var(--space-lg);
+    margin-block: var(--space-lg);
     display: grid;
-    gap: var(--space-md);
+    gap: var(--space-lg);
     margin-inline: auto;
     width: 80vw;
   }
-  @media (width> 750px) {
+  @media (width > 750px) {
+    h1 {
+      font-size: var(--fs-2w);
+      margin-inline: auto;
+      margin-top: var(--space-xl);
+    }
     .gren {
-      width: 250px;
-      margin-block: var(--space-md);
+      width: 220px;
+      margin-bottom: var(--space-md);
+      margin-top: var(--space-xs);
+      margin-inline: auto;
+    }
+    p {
+      font-family: var(--ff-text);
+      font-size: var(--fs-n);
+      max-width: 75vw;
+      margin-inline: auto;
+      text-align: center;
+      line-height: 1.4;
+      margin-bottom: var(--space-sm);
+    }
+
+    .treesection {
+      margin-block: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      grid-template-columns: 1fr 1fr;
+      max-width: 60vw;
+      column-gap: calc(var(--space-xl) * 1.5);
+      row-gap: var(--space-xl);
+      /* margin-inline: auto; */
+      /* width: 80vw; */
     }
   }
   @media (750px < width < 1175px) {
+    .treesection {
+      max-width: 70vw;
+      column-gap: var(--space-xl);
+      row-gap: var(--space-lg);
+    }
   }
 
   @media (500px < width < 750px) {
+    .treesection {
+      grid-template-columns: 1fr 1fr;
+      max-width: 90vw;
+      column-gap: var(--space-lg);
+      row-gap: var(--space-md);
+    }
+    p {
+      font-size: var(--fs-p);
+    }
   }
 </style>
