@@ -18,10 +18,10 @@ import Layout from "../layout/Layout.astro";
         </div>
       </div>
       <div class="split2">
-        <div class="fourthbox"></div>
-        <div class="fifthbox"></div>
+        <div class="fourthbox"><h2>Jord</h2></div>
+        <div class="fifthbox"><h2>Gødning</h2></div>
       </div>
-      <div class="sixthbox"></div>
+      <div class="sixthbox"><h2>Diverse</h2></div>
     </section>
   </main>
 </Layout>
@@ -55,6 +55,18 @@ import Layout from "../layout/Layout.astro";
     width: 350px;
     justify-content: center;
   }
+  .firstbox h2 {
+    position: absolute;
+    background-color: #00000085;
+    box-shadow: 0 0 10px 10px #00000085;
+    top: 85px;
+    left: 100px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 15px;
+    color: var(--white-text);
+  }
 
   .firstbox {
     position: relative;
@@ -65,45 +77,6 @@ import Layout from "../layout/Layout.astro";
     background-size: cover;
     grid-row: 1;
     /* margin-bottom: 5px; */
-  }
-
-  .firstbox h2 {
-    position: absolute;
-    background-color: #00000062;
-    box-shadow: 0 0 8px 8px #00000062;
-    top: 85px;
-    left: 100px;
-    font-family: var(--ff-cta);
-    font-weight: var(--fw-sb);
-    text-align: center;
-    border-radius: 100%;
-    color: var(--white-text);
-  }
-
-  .secondbox h2 {
-    position: absolute;
-    background-color: #00000062;
-    box-shadow: 0 0 8px 8px #00000062;
-    top: 85px;
-    left: 10px;
-    font-family: var(--ff-cta);
-    font-weight: var(--fw-sb);
-    text-align: center;
-    border-radius: 100%;
-    color: var(--white-text);
-  }
-
-  .thirdbox h2 {
-    position: absolute;
-    background-color: #00000062;
-    box-shadow: 0 0 8px 8px #00000062;
-    top: 85px;
-    left: 20px;
-    font-family: var(--ff-cta);
-    font-weight: var(--fw-sb);
-    text-align: center;
-    border-radius: 100%;
-    color: var(--white-text);
   }
 
   .split {
@@ -121,7 +94,18 @@ import Layout from "../layout/Layout.astro";
     background-image: url(/img/shop_bonsaibowl.webp);
     background-size: cover;
   }
-
+  .secondbox h2 {
+    position: absolute;
+    background-color: #00000099;
+    box-shadow: 0 0 10px 10px #00000099;
+    top: 85px;
+    left: 10px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 15px;
+    color: var(--white-text);
+  }
   .thirdbox {
     width: 166px;
     height: 180px;
@@ -130,8 +114,21 @@ import Layout from "../layout/Layout.astro";
     justify-self: flex-end;
     align-self: center;
     position: relative;
+    background-image: url(/img/tools_mobil.webp);
+    background-size: cover;
   }
-
+  .thirdbox h2 {
+    position: absolute;
+    background-color: #00000085;
+    box-shadow: 0 0 10px 10px #00000085;
+    top: 85px;
+    left: 20px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 15px;
+    color: var(--white-text);
+  }
   .split2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -139,29 +136,79 @@ import Layout from "../layout/Layout.astro";
   }
 
   .fourthbox {
+    position: relative;
     width: 166px;
     height: 180px;
     background-color: rgb(179, 140, 72);
     grid-column: 1;
     align-self: center;
+    background-image: url(/img/jord_mobil.webp);
+    background-size: cover;
+  }
+  .fourthbox h2 {
+    position: absolute;
+    background-color: #00000092;
+    box-shadow: 0 0 10px 10px #00000092;
+    top: 85px;
+    left: 50px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 15px;
+    color: var(--white-text);
   }
 
   .fifthbox {
+    position: relative;
     width: 166px;
     height: 180px;
     background-color: rgb(142, 72, 179);
     grid-column: 2;
     justify-self: flex-end;
     align-self: center;
+    background-image: url(/img/godning_mobil.webp);
+    background-size: cover;
   }
 
+  .fifthbox h2 {
+    position: absolute;
+    background-color: #00000085;
+    box-shadow: 0 0 10px 10px #00000085;
+    top: 85px;
+    left: 30px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 15px;
+    color: var(--white-text);
+  }
   .sixthbox {
+    position: relative;
     width: 350px;
     height: 160px;
     margin-top: 8px;
     background-color: rgb(179, 81, 72);
     grid-row: 4;
     justify-self: flex-end;
+    background-image: url(/img/diverse.webp);
+    background-size: cover;
+  }
+
+  .sixthbox:not(.sixthbox h2) {
+    filter: brightness(75%);
+  }
+
+  .sixthbox h2 {
+    position: absolute;
+    /* background-color: #00000085;
+    box-shadow: 0 0 10px 10px #00000085; */
+    top: 70px;
+    left: 120px;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+    border-radius: 15px;
+    color: var(--white-text);
   }
 
   @media (min-width: 550px) {
@@ -175,6 +222,21 @@ import Layout from "../layout/Layout.astro";
     .firstbox,
     .sixthbox {
       width: 500px;
+    }
+
+    .secondbox {
+      background-image: url(/img/shop_bonsaibowl_medium.webp);
+    }
+
+    .thirdbox {
+      background-image: url(img/tool_medium.webp);
+    }
+    .fourthbox {
+      background-image: url(img/jord_medium.webp);
+    }
+
+    .fifthbox {
+      background-image: url(img/godning.webp);
     }
   }
 
@@ -198,6 +260,10 @@ import Layout from "../layout/Layout.astro";
       width: 950px;
       height: 300px;
       margin-bottom: 18px;
+    }
+
+    .secondbox {
+      background-image: url(img/shop_bonsaibowl.webp);
     }
 
     .thirdbox {
