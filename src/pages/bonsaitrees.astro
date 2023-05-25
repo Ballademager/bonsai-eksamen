@@ -1,0 +1,69 @@
+---
+import TreeCard from "../components/TreeCard.astro";
+import Layout from "../layout/Layout.astro";
+---
+
+<Layout title="bonsaitræer">
+  <main>
+    <h1>Bonsaitræer</h1>
+    <img class="gren" src="/img/gren.svg" alt="figur af bonsaigren" />
+    <p>
+      Udforsk den fascinerende verden af bonsaitræer hos os. Vores bonsaitræer er kunstværker skabt med omhu og ekspertise. Fra de fine detaljer i bladene til de smukt formede grene udstråler vores bonsaitræer en unik skønhed og harmoni. Uanset om du
+      er nybegynder eller erfaren, er vi her for at støtte dig.
+    </p>
+    <p>Vi tilbyder ikke kun et bredt udvalg af bonsai-træer, men også vejledning om pleje og vedligeholdelse, så du kan nyde glæden ved at have din egen bonsai.</p>
+    <p>Tag et kig på vores udvalg, og bring naturens æstetik ind i dit hjem eller kontor med en bonsai fra Bonsaihjørnet.dk.</p>
+    <section class="treesection">
+      <TreeCard imagesource="/img/elm.webp" imagealt="Billede af et Elm bonsaitræ" treetitle="Elm" latinname="“Zelkova serrata”" treedescription="Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form." />
+      <TreeCard imagesource="/img/elm.webp" imagealt="Billede af et Elm bonsaitræ" treetitle="Elm" latinname="“Zelkova serrata”" treedescription="Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form." />
+
+      <!-- js data.map de forskellige cards -->
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: grid;
+  }
+  h1 {
+    color: var(--green);
+    font-family: var(--ff-cta);
+    font-size: var(--fs-1);
+    font-weight: var(--fw-l);
+    margin-inline: auto;
+  }
+  .gren {
+    width: 120px;
+    margin-block: var(--space-sm);
+    margin-inline: auto;
+  }
+  p {
+    font-family: var(--ff-text);
+    font-size: var(--fs-p);
+    max-width: 75vw;
+    margin-inline: auto;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: var(--space-sm);
+  }
+
+  .treesection {
+    margin-top: var(--space-lg);
+    display: grid;
+    gap: var(--space-md);
+    margin-inline: auto;
+    width: 80vw;
+  }
+  @media (width> 750px) {
+    .gren {
+      width: 250px;
+      margin-block: var(--space-md);
+    }
+  }
+  @media (750px < width < 1175px) {
+  }
+
+  @media (500px < width < 750px) {
+  }
+</style>

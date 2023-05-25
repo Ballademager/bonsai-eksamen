@@ -1,11 +1,45 @@
 ---
+const { imagesource, imagealt, treetitle, latinname, treedescription } = Astro.props;
 ---
 
 <div>
-  <img src="" alt="" />
-  <h3></h3>
-  <h4></h4>
-  <p></p>
+  <img src={imagesource} alt={imagealt} />
+  <h3>{treetitle}</h3>
+  <h4>{latinname}</h4>
+  <p>{treedescription}</p>
 </div>
 
-<style></style>
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h3 {
+    color: var(--green);
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-l);
+    font-size: var(--fs-3);
+  }
+  h4 {
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-l);
+    color: var(--green);
+    font-size: var(--fs-4);
+  }
+  p {
+    font-family: var(--ff-text);
+    font-size: var(--fs-p);
+    text-align: center;
+    /* max-width: 33ch; */
+    line-height: 1.4;
+  }
+
+  @media (width> 750px) {
+  }
+  @media (750px < width < 1175px) {
+  }
+
+  @media (500px < width < 750px) {
+  }
+</style>
