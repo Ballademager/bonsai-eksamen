@@ -11,6 +11,7 @@ import Layout from "../layout/Layout.astro";
       <p>
         Få naturens skønhed ind i dit hjem med vores eksklusive udvalg af bonsaitræer. <br /> Skab fred og harmoni med disse bonsai træer, der udstråler elegance og styrke.
       </p>
+      <!-- <a href="#velkommen" class="pilned"><div></div><div></div></a> -->
       <a href="#velkommen" class="pilned"><img src="/img/pil.svg" alt="" /></a>
     </div>
     <h2 id="velkommen">Velkommen</h2>
@@ -149,7 +150,8 @@ import Layout from "../layout/Layout.astro";
   }
   .tree_speci {
     display: grid;
-    /* justify-items: center; */
+    /* max-width: 80vw; */
+    justify-items: center;
     margin-block: var(--space-lg);
   }
   .tree_speci img {
@@ -195,6 +197,43 @@ import Layout from "../layout/Layout.astro";
     display: none;
   }
   @media (min-width: 750px) {
+    .pilned {
+      position: absolute;
+      display: block;
+      bottom: 3vw;
+      left: 50%;
+      animation: move 3s infinite;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+      }
+
+      60% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+      }
+
+      70% {
+        transform: translateY(2vw);
+        animation-timing-function: ease-out;
+      }
+      80% {
+        transform: translateY(0.5vw);
+        animation-timing-function: ease-in;
+      }
+
+      90% {
+        transform: translateY(2vw);
+        animation-timing-function: ease-out;
+      }
+
+      100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+      }
+    }
     .splash {
       position: relative;
       display: grid;
@@ -232,12 +271,7 @@ import Layout from "../layout/Layout.astro";
       align-self: end;
       grid-column: 2;
     }
-    .pilned {
-      position: absolute;
-      display: block;
-      bottom: 2rem;
-      left: 50%;
-    }
+
     .gren {
       width: 250px;
       margin-block: var(--space-md);
@@ -371,10 +405,10 @@ import Layout from "../layout/Layout.astro";
       font-size: 14px;
     }
     .pilned {
-      bottom: 1rem;
+      bottom: 3vw;
     }
     .pilned img {
-      width: 50%;
+      width: 3vw;
     }
   }
   @media (500px < width < 750px) {
