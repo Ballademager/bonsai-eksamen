@@ -9,19 +9,18 @@ import Layout from "../layout/Layout.astro";
       <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
     </section>
     <section class="section2">
-      <a href="/bonsaitrees"
-        ><div class="firstbox"><h2>Bonsai træer</h2></div></a
-      >
+      <a href="/bonsaitrees"><div class="firstbox filter"><h2>Bonsai træer</h2></div></a>
       <div class="split">
-        <div class="secondbox"><h2>Bonsai skåle</h2></div><div class="thirdbox">
+        <div class="secondbox filter"><h2>Bonsai skåle</h2></div>
+        <div class="thirdbox filter">
           <h2>Redskaber</h2>
         </div>
       </div>
       <div class="split2">
-        <div class="fourthbox"><h2>Jord</h2></div>
-        <div class="fifthbox"><h2>Gødning</h2></div>
+        <div class="fourthbox filter"><h2>Jord</h2></div>
+        <div class="fifthbox filter"><h2>Gødning</h2></div>
       </div>
-      <div class="sixthbox"><h2>Diverse</h2></div>
+      <div class="sixthbox filter"><h2>Diverse</h2></div>
     </section>
   </main>
 </Layout>
@@ -57,8 +56,8 @@ import Layout from "../layout/Layout.astro";
   }
   .firstbox h2 {
     position: absolute;
-    background-color: #00000085;
-    box-shadow: 0 0 10px 10px #00000085;
+    /* background-color: #00000085;
+    box-shadow: 0 0 10px 10px #00000085; */
     top: 85px;
     left: 100px;
     font-family: var(--ff-cta);
@@ -96,8 +95,8 @@ import Layout from "../layout/Layout.astro";
   }
   .secondbox h2 {
     position: absolute;
-    background-color: #00000099;
-    box-shadow: 0 0 10px 10px #00000099;
+    /* background-color: #00000099;
+    box-shadow: 0 0 10px 10px #00000099; */
     top: 85px;
     left: 10px;
     font-family: var(--ff-cta);
@@ -119,8 +118,8 @@ import Layout from "../layout/Layout.astro";
   }
   .thirdbox h2 {
     position: absolute;
-    background-color: #00000085;
-    box-shadow: 0 0 10px 10px #00000085;
+    /* background-color: #00000085;
+    box-shadow: 0 0 10px 10px #00000085; */
     top: 85px;
     left: 20px;
     font-family: var(--ff-cta);
@@ -147,8 +146,8 @@ import Layout from "../layout/Layout.astro";
   }
   .fourthbox h2 {
     position: absolute;
-    background-color: #00000092;
-    box-shadow: 0 0 10px 10px #00000092;
+    /* background-color: #00000092;
+    box-shadow: 0 0 10px 10px #00000092; */
     top: 85px;
     left: 50px;
     font-family: var(--ff-cta);
@@ -172,8 +171,8 @@ import Layout from "../layout/Layout.astro";
 
   .fifthbox h2 {
     position: absolute;
-    background-color: #00000085;
-    box-shadow: 0 0 10px 10px #00000085;
+    /* background-color: #00000085;
+    box-shadow: 0 0 10px 10px #00000085; */
     top: 85px;
     left: 30px;
     font-family: var(--ff-cta);
@@ -192,10 +191,23 @@ import Layout from "../layout/Layout.astro";
     justify-self: flex-end;
     background-image: url(/img/diverse.webp);
     background-size: cover;
+    isolation: isolate;
   }
-
-  .sixthbox:not(.sixthbox h2) {
-    filter: brightness(75%);
+  .filter {
+    isolation: isolate;
+  }
+  .filter::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--almost-black);
+    z-index: -1;
+    opacity: 0.3;
+  }
+  .secondbox.filter::after,
+  .fifthbox.filter::after,
+  .sixthbox.filter::after {
+    opacity: 0.4;
   }
 
   .sixthbox h2 {
