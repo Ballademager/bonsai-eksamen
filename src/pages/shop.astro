@@ -9,7 +9,9 @@ import Layout from "../layout/Layout.astro";
       <img src="/img/gren.svg" alt="figur af bonsaigren" class="gren" />
     </section>
     <section class="section2">
-      <a href="/bonsaitrees"><div class="firstbox filter"><h2>Bonsai træer</h2></div></a>
+      <a href="/bonsaitrees"
+        ><div class="firstbox filter"><h2>Bonsai træer</h2></div></a
+      >
       <div class="split">
         <div class="secondbox filter"><h2>Bonsai skåle</h2></div>
         <div class="thirdbox filter">
@@ -56,8 +58,6 @@ import Layout from "../layout/Layout.astro";
   }
   .firstbox h2 {
     position: absolute;
-    /* background-color: #00000085;
-    box-shadow: 0 0 10px 10px #00000085; */
     top: 85px;
     left: 100px;
     font-family: var(--ff-cta);
@@ -66,60 +66,57 @@ import Layout from "../layout/Layout.astro";
     border-radius: 15px;
     color: var(--white-text);
   }
+  .firstbox,
+  .secondbox,
+  .thirdbox,
+  .fourthbox,
+  .fifthbox,
+  .sixthbox {
+    background-size: cover;
+    position: relative;
+    color: var(--white-text);
+  }
+
+  h2 {
+    position: absolute;
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-sb);
+    text-align: center;
+  }
 
   .firstbox {
-    position: relative;
     width: 350px;
     height: 190px;
     margin-bottom: 8px;
     background-image: url(/img/shop_bonsaitree.webp);
-    background-size: cover;
     grid-row: 1;
-    /* margin-bottom: 5px; */
   }
-
   .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row: 2;
   }
-
   .secondbox {
-    position: relative;
     width: 166px;
     height: 180px;
     grid-column: 1;
     align-self: center;
     background-image: url(/img/shop_bonsaibowl.webp);
-    background-size: cover;
   }
   .secondbox h2 {
-    position: absolute;
-    /* background-color: #00000099;
-    box-shadow: 0 0 10px 10px #00000099; */
     top: 85px;
     left: 10px;
-    font-family: var(--ff-cta);
-    font-weight: var(--fw-sb);
-    text-align: center;
-    border-radius: 15px;
-    color: var(--white-text);
   }
   .thirdbox {
     width: 166px;
     height: 180px;
-    background-color: rgb(72, 179, 140);
     grid-column: 2;
     justify-self: flex-end;
     align-self: center;
-    position: relative;
     background-image: url(/img/tools_mobil.webp);
-    background-size: cover;
   }
   .thirdbox h2 {
     position: absolute;
-    /* background-color: #00000085;
-    box-shadow: 0 0 10px 10px #00000085; */
     top: 85px;
     left: 20px;
     font-family: var(--ff-cta);
@@ -135,19 +132,15 @@ import Layout from "../layout/Layout.astro";
   }
 
   .fourthbox {
-    position: relative;
     width: 166px;
     height: 180px;
     background-color: rgb(179, 140, 72);
     grid-column: 1;
     align-self: center;
     background-image: url(/img/jord_mobil.webp);
-    background-size: cover;
   }
   .fourthbox h2 {
     position: absolute;
-    /* background-color: #00000092;
-    box-shadow: 0 0 10px 10px #00000092; */
     top: 85px;
     left: 50px;
     font-family: var(--ff-cta);
@@ -158,7 +151,6 @@ import Layout from "../layout/Layout.astro";
   }
 
   .fifthbox {
-    position: relative;
     width: 166px;
     height: 180px;
     background-color: rgb(142, 72, 179);
@@ -166,13 +158,10 @@ import Layout from "../layout/Layout.astro";
     justify-self: flex-end;
     align-self: center;
     background-image: url(/img/godning_mobil.webp);
-    background-size: cover;
   }
 
   .fifthbox h2 {
     position: absolute;
-    /* background-color: #00000085;
-    box-shadow: 0 0 10px 10px #00000085; */
     top: 85px;
     left: 30px;
     font-family: var(--ff-cta);
@@ -182,7 +171,6 @@ import Layout from "../layout/Layout.astro";
     color: var(--white-text);
   }
   .sixthbox {
-    position: relative;
     width: 350px;
     height: 160px;
     margin-top: 8px;
@@ -190,8 +178,6 @@ import Layout from "../layout/Layout.astro";
     grid-row: 4;
     justify-self: flex-end;
     background-image: url(/img/diverse.webp);
-    background-size: cover;
-    isolation: isolate;
   }
   .filter {
     isolation: isolate;
