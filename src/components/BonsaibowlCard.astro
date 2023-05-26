@@ -1,0 +1,34 @@
+---
+const { imagesource, imagealt, bowltitle, price, bowldescription } =
+  Astro.props;
+---
+
+<!-- <div>
+  <img src={imagesource} alt={imagealt} />
+  <div>
+    <h3>{bowltitle}</h3>
+    <h3>{price}</h3>
+  </div>
+  <p>{bowldescription}</p>
+</div> -->
+<div class="div1">
+  <img src="img/sortbowl.png" alt={imagealt} />
+  <div class="">
+    <h3>Bonsaiskål</h3>
+    <h3>Pris 129 DKK</h3>
+  </div>
+  <p>Sort plettet bonsaiskål med huller i bunden</p>
+</div>
+
+<style>
+  .div1 {
+    width: 100%;
+    padding: 3%;
+  }
+  img {
+    width: 100%;
+  }
+  h3 {
+    font-size: var(--fs-3);
+  }
+</style>
