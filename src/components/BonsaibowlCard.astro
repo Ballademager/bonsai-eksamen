@@ -1,6 +1,5 @@
 ---
-const { imagesource, imagealt, bowltitle, price, bowldescription } =
-  Astro.props;
+// const { databowl } = Astro.props;
 ---
 
 <!-- <div>
@@ -12,15 +11,18 @@ const { imagesource, imagealt, bowltitle, price, bowldescription } =
   <p>{bowldescription}</p>
 </div> -->
 <div class="div1">
-  <img src="img/sortbowl.png" alt={imagealt} />
+  <img src="img/sortbowl.png" alt="" />
   <div class="">
     <h3>Bonsaiskål</h3>
     <h3>Pris 129 DKK</h3>
   </div>
-  <p>Sort plettet bonsaiskål med huller i bunden</p>
+  <h4>Sort plettet bonsaiskål med huller i bunden</h4>
 </div>
 
 <style>
+  h4 {
+    font-weight: var(--fw-p);
+  }
   .div1 {
     width: 100%;
     padding: 3%;

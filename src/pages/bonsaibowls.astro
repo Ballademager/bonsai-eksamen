@@ -4,14 +4,69 @@ import Layout from "../layout/Layout.astro";
 ---
 
 <Layout>
-  <img src="/img/bowl_topimg.png" alt="" />
-  <div>
-    <BonsaibowlCard />
-    <BonsaibowlCard />
-  </div>
+  <main>
+    <section>
+      <img src="/img/bowl_topimg.png" alt="" />
+      <h1>Bonsaiskåle</h1>
+      <img class="gren" src="/img/gren.svg" alt="" />
+      <p>
+        Her på siden finder du et udvalg af smukke bonsai skåle. Vi har et bredt
+        sortiment af både indendørs samt udendørs skåle. Skålene findes i mange
+        farver og størrelser.
+      </p>
+    </section>
+    <section>
+      <h2>Bonsaiskåle uden underskål</h2>
+      <h3>Indendørs</h3>
+      <div>
+        <BonsaibowlCard />
+        <BonsaibowlCard />
+      </div>
+      <div>
+        <BonsaibowlCard />
+        <BonsaibowlCard />
+      </div>
+    </section>
+    <section>
+      <h2>Bonsaiskåle med underskål</h2>
+      <h3>udendørs</h3>
+      <div>
+        <BonsaibowlCard />
+        <BonsaibowlCard />
+      </div>
+      <div>
+        <BonsaibowlCard />
+        <BonsaibowlCard />
+      </div>
+    </section>
+    <section>
+      <h2>Japanske skåle</h2>
+      <div>
+        <BonsaibowlCard />
+        <BonsaibowlCard />
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
+  h1 {
+    font-size: var(--fs-2);
+    font-weight: var(--fw-l);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--ff-cta);
+    color: var(--green);
+    text-align: center;
+  }
+
+  .gren {
+    width: 120px;
+    display: block;
+    margin-inline: auto;
+  }
   img {
     width: 100vw;
   }
@@ -19,5 +74,21 @@ import Layout from "../layout/Layout.astro";
     display: flex;
     padding-left: 5%;
     padding-right: 5%;
+  }
+
+  main section:nth-of-type(1) {
+    background-color: var(--white);
+  }
+
+  section:nth-of-type(2) {
+    background-color: var(--bg-grey);
+  }
+
+  section:nth-of-type(3) {
+    background-color: var(--white);
+  }
+
+  section:nth-of-type(4) {
+    background-color: var(--bg-grey);
   }
 </style>
