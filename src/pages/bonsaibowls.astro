@@ -1,0 +1,23 @@
+---
+import BonsaibowlCard from "../components/BonsaibowlCard.astro";
+import Layout from "../layout/Layout.astro";
+---
+
+<Layout>
+  <img src="/img/bowl_topimg.png" alt="" />
+  <div>
+    <BonsaibowlCard />
+    <BonsaibowlCard />
+  </div>
+</Layout>
+
+<style>
+  img {
+    width: 100vw;
+  }
+  div {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+</style>
