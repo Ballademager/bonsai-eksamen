@@ -1,12 +1,15 @@
 ---
-const { imagesource, imagealt, treetitle, latinname, treedescription } = Astro.props;
+const { data } = Astro.props;
+// const { imagesource, imagealt, treetitle, latinname, treedescription } = Astro.props;
 ---
 
 <div>
-  <img src={imagesource} alt={imagealt} />
-  <h3>{treetitle}</h3>
-  <h4>{latinname}</h4>
-  <p>{treedescription}</p>
+  <a href="/elmTree/"
+    ><img src={data.imgsrc} alt={data.imgalt} />
+    <h3>{data.title}</h3>
+    <h4>{data.latin}</h4></a
+  >
+  <p>{data.description}</p>
 </div>
 
 <style>
@@ -15,29 +18,55 @@ const { imagesource, imagealt, treetitle, latinname, treedescription } = Astro.p
     flex-direction: column;
     align-items: center;
   }
-  h3 {
+  a {
+    text-align: center;
+  }
+  h3,
+  h4 {
     color: var(--green);
     font-family: var(--ff-cta);
     font-weight: var(--fw-l);
+  }
+  p {
+    font-family: var(--ff-text);}
+  h3 {
     font-size: var(--fs-3);
   }
   h4 {
-    font-family: var(--ff-cta);
-    font-weight: var(--fw-l);
-    color: var(--green);
     font-size: var(--fs-4);
   }
   p {
-    font-family: var(--ff-text);
     font-size: var(--fs-p);
     text-align: center;
-    /* max-width: 33ch; */
     line-height: 1.4;
+    max-width: 75vw;
   }
 
-  @media (width> 750px) {
+  @media (width > 750px) {
+    a {
+      text-align: start;
+    }
+    h3 {
+      font-size: var(--fs-3w);
+    }
+    h4 {
+      font-size: var(--fs-4w);
+    }
+    p {
+      font-size: var(--fs-n);
+      text-align: start;
+      line-height: 1.4;
+      /* max-width: 33ch; */
+    }
+    h3,
+    h4,
+    p {
+      padding-inline: var(--space-xs);
+    }
   }
   @media (750px < width < 1175px) {
+    p {
+    font-size: 14px;
   }
 
   @media (500px < width < 750px) {

@@ -2,9 +2,6 @@
 import TreeCard from "../components/TreeCard.astro";
 import Layout from "../layout/Layout.astro";
 
-// https://bcjykukoxzsusmoltaky.supabase.co
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjanlrdWtveHpzdXNtb2x0YWt5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwMTg3ODYsImV4cCI6MjAwMDU5NDc4Nn0.AD5gYYbHDUkLyrwBcKhI3TJgXTSqIj9SSYw9TvhA7kA
-
 // https://bcjykukoxzsusmoltaky.supabase.co/rest/v1/bonsaitrees
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjanlrdWtveHpzdXNtb2x0YWt5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwMTg3ODYsImV4cCI6MjAwMDU5NDc4Nn0.AD5gYYbHDUkLyrwBcKhI3TJgXTSqIj9SSYw9TvhA7kA
 
@@ -36,10 +33,6 @@ console.log(data);
           return <TreeCard data={treecard} />;
         })
       }
-      <TreeCard imagesource="/img/elm.webp" imagealt="Billede af et Elm bonsaitræ" treetitle="Elm" latinname="“Zelkova serrata”" treedescription="Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form." />
-      <TreeCard imagesource="/img/elm.webp" imagealt="Billede af et Elm bonsaitræ" treetitle="Elm" latinname="“Zelkova serrata”" treedescription="Beundret for deres æstetik, der giver en fornemmelse af styrke og harmoni i en kompakt form." />
-
-      <!-- js data.map de forskellige cards -->
     </section>
   </main>
 </Layout>
@@ -54,6 +47,7 @@ console.log(data);
     font-size: var(--fs-1);
     font-weight: var(--fw-l);
     margin-inline: auto;
+    margin-top: var(--space-md);
   }
   .gren {
     width: 120px;
@@ -71,21 +65,62 @@ console.log(data);
   }
 
   .treesection {
-    margin-top: var(--space-lg);
+    margin-block: var(--space-lg);
     display: grid;
-    gap: var(--space-md);
+    gap: var(--space-lg);
     margin-inline: auto;
     width: 80vw;
   }
-  @media (width> 750px) {
+  @media (width > 750px) {
+    h1 {
+      font-size: var(--fs-2w);
+      margin-inline: auto;
+      margin-top: var(--space-xl);
+    }
     .gren {
-      width: 250px;
-      margin-block: var(--space-md);
+      width: 220px;
+      margin-bottom: var(--space-md);
+      margin-top: var(--space-xs);
+      margin-inline: auto;
+    }
+    p {
+      font-family: var(--ff-text);
+      font-size: var(--fs-n);
+      max-width: 75vw;
+      margin-inline: auto;
+      text-align: center;
+      line-height: 1.4;
+      margin-bottom: var(--space-sm);
+    }
+
+    .treesection {
+      margin-block: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      grid-template-columns: 1fr 1fr;
+      max-width: 60vw;
+      column-gap: calc(var(--space-xl) * 1.5);
+      row-gap: var(--space-xl);
+      /* margin-inline: auto; */
+      /* width: 80vw; */
     }
   }
   @media (750px < width < 1175px) {
+    .treesection {
+      max-width: 70vw;
+      column-gap: var(--space-xl);
+      row-gap: var(--space-lg);
+    }
   }
 
   @media (500px < width < 750px) {
+    .treesection {
+      grid-template-columns: 1fr 1fr;
+      max-width: 90vw;
+      column-gap: var(--space-lg);
+      row-gap: var(--space-md);
+    }
+    p {
+      font-size: var(--fs-p);
+    }
   }
 </style>
