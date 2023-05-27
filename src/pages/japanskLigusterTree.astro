@@ -16,9 +16,10 @@ console.log(data);
 
 <Layout title="Japansk Liguster">
   <main>
-    <img src="/img/japanskLigusterMobile.webp" alt="Flot Ligustertræ" />
-    <section class="buy">
-      <div class="first_div">
+      <section class="buy">
+        <img src="/img/treeart_liguster.webp" alt="Flot Ligustertræ">
+      <div class="leftside">
+        <div class="first_div">
         <h1>Japansk Liguster</h1>
         <h4>"Ligustrum Japonicum"</h4>
         <p>Japansk liguster, er en populær bonsai-art, der stammer fra Japan. Det tilhører olivenfamilien og er hjemmehørende i Østasien, herunder Japan, Kina og Korea.</p>
@@ -41,7 +42,7 @@ console.log(data);
         <p>OBS: planter kan pt kun bestilles til “AFHENTNING I BUTIK” og skal afhentes i butikken Ålekistevej 63.</p>
         <p>Husk at tryk : “AFHENTNING I BUTIK” ved køb af planter. Hvis planten købes sammen med andre varer kan vi efter ønske pakke og sende de andre varer.</p>
       </div>
-      <a href="/bonsaitrees/"><img src="/img/greenarrow.svg" alt="" />TILBAGE TIL BONSAITRÆER</a>
+      <a href="/bonsaitrees/"><img src="/img/greenarrow.svg" alt="" />TILBAGE TIL BONSAITRÆER</a></div>
     </section>
     <section class="description">
       <article class="art1">
@@ -71,10 +72,12 @@ console.log(data);
           symboliserer også styrke, vedholdenhed og visdom, da de kan blive gamle og udvikle karakter og patina gennem årene med omhyggelig pleje og træning.
         </p>
       </article>
+      </section>
+      <section class="description2">
       <article class="art3">
         <h2>Beskæring</h2>
-        <div><img src="/img/beskæring.webp" alt="Billede af bonsaitræ der klippes til" />
-            <p>Nye skud kan med fordel beskæres når der er vokset en 5-6 bladpar frem. Klip tilbage til 1-3 bladpar. Større grene kan fjernes hele året.</p></div>
+        <img src="/img/beskæring.webp" alt="Billede af bonsaitræ der klippes til" />
+            <p>Nye skud kan med fordel beskæres når der er vokset en 5-6 bladpar frem. Klip tilbage til 1-3 bladpar. Større grene kan fjernes hele året.</p>
       </article>
       <article class="art4">
         <h2>Placering</h2>
@@ -101,32 +104,16 @@ console.log(data);
         </p>
       </article>
     </section>
-    <div class="dividerline"></div>
-    <section class="shopsec">
-      <div class="container">
-        <div class="card_scroller scroll_snap">
-          {
-            data.map((treecard) => {
-              return (
-                <div class="card">
-                  <TreeCard data={treecard} size="small" />
-                </div>
-              );
-            })
-          }
-        </div>
-      </div>
-      <OrangeButton link="/bonsaitrees/" linktext="BONSAITRÆER" />
-    </section>
+    <!-- <div class="dividerline"></div> -->
+      <div class="orange_b">
+        <OrangeButton link="/bonsaitrees/" linktext="TILBAGE TIL BONSAITRÆER" />
+    </div>
   </main>
 </Layout>
 
 
-
 <style>
-  h1 + h4 {
-    margin-block: var(--space-xs);
-  }
+
   /* --- General styling --- */
   main {
     display: grid;
@@ -161,11 +148,19 @@ console.log(data);
   }
 
   /*  --- First section ---  */
+.buy > img:first-child {
+    opacity: .8;
+    border-bottom: solid 2px var(--green);
+    margin-bottom: var(--space-sm);
+}
   h1 {
     font-size: calc(var(--fs-2) * 1.2);
   }
   h4 {
     font-size: var(--fs-4);
+  }
+  h1 + h4 {
+    margin-block: var(--space-xs);
   }
   .price {
     margin-block: var(--space-sm);
@@ -226,7 +221,7 @@ console.log(data);
   article:nth-of-type(2n + 1) {
     background-color: var(--bg-grey);
   }
-  article:last-of-type {
+  article:last-of-type:not(.art2) {
     background-color: var(--white);
   }
   h2 {
@@ -236,7 +231,7 @@ console.log(data);
   article > :not(:last-child) {
     margin-bottom: var(--space-sm);
   }
-  .description img {
+  article img {
     max-width: 90vw;
   }
   .art1 img:nth-of-type(1) {
@@ -286,27 +281,72 @@ console.log(data);
   .shopsec {
     margin-bottom: var(--space-lg);
   }
+  .orange_b {
+    justify-self: center;
+    margin-block: var(--space-lg);
+  }
   @media (width > 750px) {
+    .buy {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+        padding-inline: var(--space-xl);
+        margin-top: 0;
+        border-bottom: 2px solid var(--green);
+    }
+    .buy > img:first-child {
+    opacity: .8;
+    border-bottom: none;
+    margin-bottom: 0;
+    order: 1;
+    align-self: end;
+}
+.leftside {
+    padding-inline: var(--space-md);
+    padding-block: var(--space-md);
+    justify-items: start;
+}
+.leftside :is(h1, h4) {
+    justify-self: start;
+}
+h1 {
+    font-size: var(--fs-2w);
+    font-size: 50px;
+    margin-bottom: var(--space-sm);
+    font-weight: var(--fw-l);
+}
+.leftside h4 {
+    font-size: var(--fs-3w);
+}
+.price {
+    margin-block: var(--space-xs);
+}
+.price {
+    justify-items: start;
+}
     p {
         font-size: var(--fs-n);
+        text-align: start;
+    }
+    .description {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 0;
+        padding-top: var(--space-md);
+        background-color: var(--bg-grey);
+
     }
     .art1, .art2 {
         position: relative;
         background-color: var(--bg-grey);
+        overflow: hidden;
+
     }
     .art2 {
         padding-top: 0;
     }
-    .art1::before, .art2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  left: -9999px;
-  right: -9999px;
-  bottom: 0;
-  background-color: inherit;
-}
+
 section {
     justify-self: center;
 }
@@ -318,11 +358,33 @@ article {
     width: min(85vw, 70rem);
     /* padding-inline: var(--space-xl); */
 }
-:is(.art3, .art4, .art5,.art6 ) div{
-grid-template-columns: 1fr 1fr;
+:is(.art3, .art4, .art5,.art6 ) {
+grid-template-columns: 3fr 2fr;
+grid-template-rows: 1fr 1fr 1fr;
+gap: var(--space-lg);
+border-bottom: 2px solid var(--green);
 }
-:is(.art3, .art4, .art5,.art6 ) div p{
-    order: -1;
+:is(.art3, .art4, .art5,.art6 ) img{
+    order: 1;
+    max-width: 30vw;
+}
+:is(.art3, .art4, .art5,.art6 ) :is(h2,p){
+grid-column: 1;
+/* grid-row: 2; */
+}
+:is(.art3, .art4, .art5,.art6 ) img{
+grid-column: 2;
+grid-row: 1/ span 3;
+}
+.dividerline{
+    display: none;
+}
+:is(.art3, .art4, .art5,.art6 ) h2{
+    align-self: flex-end;
+
+}
+:is(.art3, .art4, .art5,.art6 ) p{
+
 }
   article:not(article:is(.art1, .art2)) {
     background-color: var(--white);
@@ -381,6 +443,9 @@ grid-template-columns: 1fr 1fr;
       inline-size: 20vw;
       /* height: 100px; */
       /* background-color: hotpink; */
+    }
+    .orange_b {
+      margin-block: var(--space-xxl);
     }
   }
 </style>
