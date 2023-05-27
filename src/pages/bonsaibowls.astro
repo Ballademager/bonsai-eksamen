@@ -32,7 +32,7 @@ console.log(databowl);
         </p>
       </div>
     </section>
-    <section>
+    <section class="section">
       <h2>Bonsaiskåle uden underskål</h2>
       <h3>Indendørs</h3>
       <div class="div">
@@ -45,7 +45,7 @@ console.log(databowl);
         <PlaceholderCard />
       </div>
     </section>
-    <section>
+    <section class="section">
       <h2>Bonsaiskåle med underskål</h2>
       <h3>Udendørs</h3>
       <div class="div">
@@ -59,7 +59,7 @@ console.log(databowl);
         <PlaceholderCard />
       </div>
     </section>
-    <section>
+    <section class="section">
       <h2>Japanske skåle</h2><h3></h3>
       <div class="div">
         <PlaceholderCard />
@@ -154,13 +154,16 @@ console.log(databowl);
   }
 
   @media (min-width: 700px) {
+    .gren {
+      width: 150px;
+    }
     p,
     h2,
     h3 {
       text-align: left;
     }
     h1 {
-      font-size: var(--fs-2w);
+      font-size: var(--fs-2);
       font-weight: var(--fw-l);
     }
 
@@ -203,6 +206,71 @@ console.log(databowl);
     .first_div {
       display: block;
       align-self: center;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .section {
+      padding-top: 3%;
+    }
+    .div {
+      padding-top: 2%;
+    }
+    .gren {
+      width: 210px;
+    }
+
+    h1 {
+      font-size: var(--fs-1);
+    }
+    p {
+      font-size: var(--fs-n);
+    }
+
+    h2 {
+      font-size: var(--fs-3w);
+    }
+
+    h3 {
+      font-size: var(--fs-n);
+    }
+  }
+
+  @media (min-width: 980px) {
+    p {
+      width: 420px;
+      margin-inline: auto;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    .gren {
+      padding-bottom: 20px;
+    }
+
+    .first_div {
+      margin-inline: auto;
+      width: 490px;
+    }
+
+    p {
+      width: 490px;
+      margin-inline: 0;
+    }
+    h1 {
+      font-size: var(--fs-2w);
+      padding-bottom: 15px;
+    }
+    p {
+      font-size: var(--fs-n);
+    }
+
+    h2 {
+      font-size: var(--fs-2);
+    }
+
+    h3 {
+      font-size: var(--fs-4);
     }
   }
 </style>
