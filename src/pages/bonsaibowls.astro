@@ -18,7 +18,7 @@ console.log(databowl);
 
 <Layout>
   <main>
-    <section>
+    <section id="first_section">
       <img id="img1" src="/img/bowl_topimg.webp" alt="" />
       <img id="img2" src="/img/bowl_topimg_web.webp" alt="" /><div
         class="first_div"
@@ -31,8 +31,11 @@ console.log(databowl);
           i mange farver og størrelser.
         </p>
       </div>
+      <a href="#descript" id="orange" class="pilned"
+        ><img src="/img/pil.svg" alt="" /></a
+      >
     </section>
-    <section class="section">
+    <section id="descript" class="section">
       <h2>Bonsaiskåle uden underskål</h2>
       <h3>Indendørs</h3>
       <div class="div">
@@ -72,6 +75,9 @@ console.log(databowl);
 </Layout>
 
 <style>
+  .pilned {
+    display: none;
+  }
   #img2 {
     display: none;
   }
@@ -271,6 +277,82 @@ console.log(databowl);
 
     h3 {
       font-size: var(--fs-4);
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .first_section {
+      position: relative;
+    }
+    .pilned {
+      display: block;
+    }
+
+    #orange img {
+      width: 3vw;
+    }
+    #orange {
+      position: absolute;
+      display: block;
+      /* padding-top: 1.5vw; */
+      top: 500px;
+      left: 48.5%;
+      z-index: 1;
+      animation: move 3s infinite;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+      }
+
+      60% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+      }
+
+      70% {
+        transform: translateY(2vw);
+        animation-timing-function: ease-out;
+      }
+      80% {
+        transform: translateY(0.5vw);
+        animation-timing-function: ease-in;
+      }
+
+      90% {
+        transform: translateY(2vw);
+        animation-timing-function: ease-out;
+      }
+
+      100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+      }
+    }
+  }
+
+  @media (min-width: 1450px) {
+    #orange {
+      top: 530px;
+    }
+  }
+
+  @media (min-width: 1550px) {
+    #orange {
+      top: 550px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    #orange {
+      top: 590px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    #orange {
+      top: 650px;
     }
   }
 </style>
