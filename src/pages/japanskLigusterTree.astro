@@ -401,7 +401,22 @@ h1 {
   article > :not(:last-child) {
     margin-bottom: 0;
   }
+  }
+  @media (750px < width < 930px) {
+    p {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    .leftside h4 {
+        font-size: var(--fs-4w);
+    }
+    .leftside {
+        padding-inline: var(--space-xs)
+        padding-block: var(--space-xs)
 
+    }
   }
 </style>
 
