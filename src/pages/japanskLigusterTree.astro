@@ -50,11 +50,14 @@ console.log(data);
           Japansk liguster bonsaitræer har en lang historie inden for bonsai-dyrkning. Bonsai som kunstform har rødder i Kina og blev senere adopteret og forfinet af japanske mestre. Traditionen med at dyrke og forme japanske ligustrum-bonsaitræer
           har udviklet sig i løbet af århundreder og er blevet dybt forankret i japansk kultur og æstetik.
         </p>
+        <div class="imgs">
+            <img src="/img/beskrivelse2.webp" alt="Billede af et Japansk Liguster i solskin" />
+            <img src="/img/beskrivelse.webp" alt="Billede af et andet Japansk Liguster i flotte omgivelser" />
+        </div>
         <p>
           Japansk liguster er kendt for sine små, mørkegrønne blade og forgrenede struktur, hvilket gør den velegnet til bonsai-dyrkning. Bladene er læderagtige og elliptiske i form, og de skaber et kompakt og fyldigt løvmasse, når træet dyrkes og
           formes som en bonsai.
         </p>
-        <img src="" alt="" />
       </article>
       <article class="art2">
         <h2>Kendetegn</h2>
@@ -62,6 +65,7 @@ console.log(data);
           Japansk liguster bonsaitræer er ofte kendt for deres evne til at danne tætte og komplekse netværk af grene og for at udvikle karakteristiske luftrødder. Bonsai-kunstnere bruger præcise beskæringsteknikker og træning for at forme træet i
           ønskede stilarter som den formelle opstammede stil eller den naturlige, mere vildtvoksende stil.
         </p>
+        <img src="/img/beskrivelse2.webp" alt="Billede af et Japansk Liguster i solskin" />
         <p>
           Japanske liguster bonsaitræer udstråler en følelse af elegance, ro og balance. De er ofte udstillet i bonsai-udstillinger og beundres for deres skønhed og den dybe forbindelse, de har med naturen. Ligustrum japonicum-bonsaitræer
           symboliserer også styrke, vedholdenhed og visdom, da de kan blive gamle og udvikle karakter og patina gennem årene med omhyggelig pleje og træning.
@@ -69,12 +73,12 @@ console.log(data);
       </article>
       <article class="art3">
         <h2>Beskæring</h2>
-        <img src="" alt="" />
-        <p>Nye skud kan med fordel beskæres når der er vokset en 5-6 bladpar frem. Klip tilbage til 1-3 bladpar. Større grene kan fjernes hele året.</p>
+        <div><img src="/img/beskæring.webp" alt="Billede af bonsaitræ der klippes til" />
+            <p>Nye skud kan med fordel beskæres når der er vokset en 5-6 bladpar frem. Klip tilbage til 1-3 bladpar. Større grene kan fjernes hele året.</p></div>
       </article>
       <article class="art4">
         <h2>Placering</h2>
-        <img src="" alt="" />
+        <img src="/img/placering.webp" alt="Billede af bonsaitræ placeret i flotte omgivelser" />
         <p>
           Japansk liguster trives bedst i et vindue med direkte sol. Gerne et vindue med sol hele dagen men ellers et vindue med enten morgen- eller aftensol. Indendørs bør planten have så meget lys som muligt. Udendørs kan planten godt få
           svedne/rødlige blade, hvis den står direkte i solen.
@@ -82,7 +86,7 @@ console.log(data);
       </article>
       <article class="art5">
         <h2>Vanding</h2>
-        <img src="" alt="" />
+        <img src="/img/vanding.webp" alt="Billede af træ der vandes" />
         <p>
           Mærk med en finger på jorden om den er tør, hvis det er tilfældet så skal planten vandes. Tjek dagligt med fingeren og overbrus den i stedet for at vande i skålen(der er hul i bunden af skålen, hvilket gør overbrusning let). Japansk
           liguster vil hænge med bladene når den mangler vand. Den rejser sig dog hurligt igen når den bliver vandet.
@@ -90,7 +94,7 @@ console.log(data);
       </article>
       <article class="art6">
         <h2>Ompotning</h2>
-        <img src="" alt="" />
+        <img src="/img/ompotning.webp" alt="Billede af en nyplantet spire" />
         <p>
           Marts til maj. Vær lidt forsigtig når du ompotter. Vi anbefaler at planten beskæres så kraftigt som muligt ca. 14 dage før ompotning. Japansk liguster bør overbruses dagligt med forstøver de første 1-2 uger efter ompotning. Dette vil
           minimere bladtabet.
@@ -191,6 +195,9 @@ console.log(data);
     border: 2px solid var(--green);
     padding-block: var(--space-xxs);
   }
+  select:focus-visible {
+  outline: none;
+}
   form button {
     background-color: var(--green);
     color: var(--white);
@@ -229,6 +236,13 @@ console.log(data);
   article > :not(:last-child) {
     margin-bottom: var(--space-sm);
   }
+  .description img {
+    max-width: 90vw;
+  }
+  .art1 img:nth-of-type(1) {
+    display: none;
+  }
+
   .dividerline {
     height: 1px;
     border-radius: 50px;
@@ -273,6 +287,69 @@ console.log(data);
     margin-bottom: var(--space-lg);
   }
   @media (width > 750px) {
+    p {
+        font-size: var(--fs-n);
+    }
+    .art1, .art2 {
+        position: relative;
+        background-color: var(--bg-grey);
+    }
+    .art2 {
+        padding-top: 0;
+    }
+    .art1::before, .art2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  background-color: inherit;
+}
+section {
+    justify-self: center;
+}
+article {
+    display: grid;
+    /* justify-self: center; */
+    justify-items: start;
+    padding-block: var(--space-md);
+    width: min(85vw, 70rem);
+    /* padding-inline: var(--space-xl); */
+}
+:is(.art3, .art4, .art5,.art6 ) div{
+grid-template-columns: 1fr 1fr;
+}
+:is(.art3, .art4, .art5,.art6 ) div p{
+    order: -1;
+}
+  article:not(article:is(.art1, .art2)) {
+    background-color: var(--white);
+  }
+    article p{
+        text-align: start;
+        max-width: 90ch;
+    }
+
+    .art1 img:nth-of-type(1) {
+    display: block;
+  }
+  .imgs {
+    max-width: 90vw;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    order: 1;
+    margin-top: var(--space-lg);
+    gap: var(--space-lg);
+  }
+  .imgs img {
+    max-width: 35vw;
+  }
+  .art2 img {
+    display: none;
+  }
     .shopsec {
       padding-top: var(--space-xl);
       margin-bottom: var(--space-lg);
@@ -314,7 +391,7 @@ console.log(data);
     function pricing() {
     const priceElement = document.getElementById("displayed_price");
     const ageElement = document.getElementById("displayed_age");
-    const ageSelect = document.getElementById("age");
+    const ageSelect = document.getElementById("age") as HTMLSelectElement;
 
     // Priserne/alderen for de forskellige valgmuligheder defineres i et array
     const prices = {
