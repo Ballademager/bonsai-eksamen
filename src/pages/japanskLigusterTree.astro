@@ -342,6 +342,9 @@ grid-row: 1/ span 3;
 :is(.art3, .art4, .art5,.art6 ) p{
 
 }
+.art3 img, .art4 img, .art5 img, .art6 img {
+    align-self: center;
+  }
   article:not(article:is(.art1, .art2)) {
     background-color: var(--white);
   }
@@ -387,6 +390,7 @@ h1 {
 }
 .buy {
     gap: var(--space-xs);
+    padding-inline: var(--space-sm);
 }
 .info {
     margin-block: var(--space-sm);
@@ -397,9 +401,7 @@ h1 {
   article > :not(:last-child) {
     margin-bottom: 0;
   }
-  .art3 img, .art4 img, .art5 img, .art6 img {
-    align-self: center;
-  }
+
   }
 </style>
 
