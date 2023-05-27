@@ -1,6 +1,17 @@
 ---
 import OrangeButton from "../components/OrangeButton.astro";
 import Layout from "../layout/Layout.astro";
+import TreeCard from "../components/TreeCard.astro";
+
+const url = "https://bcjykukoxzsusmoltaky.supabase.co/rest/v1/bonsaitrees";
+const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjanlrdWtveHpzdXNtb2x0YWt5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwMTg3ODYsImV4cCI6MjAwMDU5NDc4Nn0.AD5gYYbHDUkLyrwBcKhI3TJgXTSqIj9SSYw9TvhA7kA";
+
+const data = await fetch(url, {
+  method: "GET",
+  headers: {
+    apikey: api,
+  },
+}).then((res) => res.json());
 ---
 
 <Layout title="Bonsaihjørnet">
@@ -18,7 +29,12 @@ import Layout from "../layout/Layout.astro";
     <img class="gren" src="/img/gren.svg" alt="figur af bonsaigren" />
     <p>Hej og velkommen til Bonsaihjørnet.dk! Opdag skønheden i bonsai-træer hos os. Vi tilbyder et udvalg af unikke bonsaitræer der bringer naturens skønhed og harmoni ind i dit hjem eller kontor.</p>
     <section class="tree_section">
-      <div class="tree_speci">
+      {
+        data.slice(0, 3).map((treecard) => {
+          return <TreeCard data={treecard} />;
+        })
+      }
+      <!-- <div class="tree_speci">
         <img src="/img/elm.webp" alt="Bonsaitræ, Elm" />
         <h3>Elm</h3>
         <h4>"Zelkova Serrata"</h4>
@@ -35,7 +51,7 @@ import Layout from "../layout/Layout.astro";
         <h3>Serissa</h3>
         <h4>“Sarcocephalus”</h4>
         <p>Det er kendt for sine smukke, små blade og kompakte vækst og skaber en fornemmelse af elegance og harmoni.</p>
-      </div>
+      </div> -->
     </section>
     <OrangeButton link="/bonsaitrees/" linktext="BONSAITRÆER" />
     <div class="dividerline"></div>
