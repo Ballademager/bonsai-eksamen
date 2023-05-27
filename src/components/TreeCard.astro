@@ -7,9 +7,9 @@ const { data , size} = Astro.props;
   <a href="/japanskLigusterTree/"
     ><img src={data.imgsrc} alt={data.imgalt} />
     <h3>{data.title}</h3>
-    <h4>{data.latin}</h4></a
+    <h4>{data.latin}</h4>
+    <h5>{data.description}</h5></a
   >
-  <h5>{data.description}</h5>
 </div>
 
 <style>
@@ -20,6 +20,7 @@ const { data , size} = Astro.props;
   }
   a {
     text-align: center;
+    color: var(--almost-black);
   }
   h3,
   h4 {
