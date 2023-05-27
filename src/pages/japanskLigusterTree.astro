@@ -104,7 +104,6 @@ console.log(data);
         </p>
       </article>
     </section>
-    <!-- <div class="dividerline"></div> -->
       <div class="orange_b">
         <OrangeButton link="/bonsaitrees/" linktext="TILBAGE TIL BONSAITRÆER" />
     </div>
@@ -237,49 +236,8 @@ console.log(data);
   .art1 img:nth-of-type(1) {
     display: none;
   }
-
-  .dividerline {
-    height: 1px;
-    border-radius: 50px;
-    width: 80%;
-    background-color: var(--green);
-    margin-block: var(--space-lg);
-    margin-inline: auto;
-  }
-
-  /* --- horizontal scrolling ---- */
-  .container {
-    inline-size: 100%;
-    margin-bottom: var(--space-lg);
-    /* margin-inline: auto; */
-  }
-  .card_scroller {
-    width: 100%;
-    gap: calc(var(--space-xl) * 1);
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 90%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    /* padding-left: 12vw; */
-  }
-  .scroll_snap {
-    scroll-snap-type: inline mandatory;
-    /* scroll-pading-inline: 12vw; */
-  }
-  .scroll_snap > * {
-    scroll-snap-align: center;
-  }
-  .card {
-    inline-size: 75vw;
-    padding-bottom: var(--space-md);
-  }
-
   .buy a {
     color: var(--green);
-  }
-  .shopsec {
-    margin-bottom: var(--space-lg);
   }
   .orange_b {
     justify-self: center;
@@ -376,9 +334,6 @@ grid-column: 1;
 grid-column: 2;
 grid-row: 1/ span 3;
 }
-.dividerline{
-    display: none;
-}
 :is(.art3, .art4, .art5,.art6 ) h2{
     align-self: flex-end;
 
@@ -412,10 +367,6 @@ grid-row: 1/ span 3;
   .art2 img {
     display: none;
   }
-    .shopsec {
-      padding-top: var(--space-xl);
-      margin-bottom: var(--space-lg);
-    }
     .container {
       /* inline-size: min(100% - 4rem, 100rem); */
       inline-size: 100%;
