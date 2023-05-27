@@ -1,36 +1,48 @@
 ---
-// const { databowl } = Astro.props;
+const { databowl } = Astro.props;
 ---
 
-<!-- <div>
-  <img src={imagesource} alt={imagealt} />
-  <div>
-    <h3>{bowltitle}</h3>
-    <h3>{price}</h3>
-  </div>
-  <p>{bowldescription}</p>
-</div> -->
 <div class="div1">
-  <img src="img/sortbowl.png" alt="" />
-  <div class="">
-    <h3>Bonsaiskål</h3>
-    <h3>Pris 129 DKK</h3>
+  <img src={databowl.imgsrc} alt={databowl.imgalt} />
+  <div class="overskrift">
+    <h3>{databowl.title}</h3>
+    <h3>{databowl.price}</h3>
   </div>
-  <h4>Sort plettet bonsaiskål med huller i bunden</h4>
+  <h5>{databowl.description}</h5>
 </div>
 
 <style>
+  .overskrift {
+    display: flex;
+    justify-content: space-between;
+  }
   h4 {
     font-weight: var(--fw-p);
   }
   .div1 {
-    width: 100%;
-    padding: 3%;
+    /* width: 100%; */
+    padding: 5%;
+    padding-bottom: 6%;
   }
   img {
     width: 100%;
   }
   h3 {
-    font-size: var(--fs-3);
+    color: var(--green);
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-l);
+    font-size: var(--fs-p);
+    padding-bottom: 2px;
+  }
+
+  h3:nth-of-type(2) {
+    font-weight: var(--fw-m);
+  }
+
+  h5 {
+    font-family: var(--ff-text);
+    font-size: var(--fs-xs);
+    font-weight: var(--fs-l);
+    line-height: 1.2;
   }
 </style>
