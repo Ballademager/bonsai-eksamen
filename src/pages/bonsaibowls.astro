@@ -1,6 +1,7 @@
 ---
 import BonsaibowlCard from "../components/BonsaibowlCard.astro";
 import Layout from "../layout/Layout.astro";
+import PlaceholderCard from "../components/PlaceholderCard.astro";
 
 const url = "https://bcjykukoxzsusmoltaky.supabase.co/rest/v1/bonsaipots";
 const api =
@@ -18,51 +19,62 @@ console.log(databowl);
 <Layout>
   <main>
     <section>
-      <img src="/img/bowl_topimg.webp" alt="" />
-      <h1>Bonsaiskåle</h1>
-      <img class="gren" src="/img/gren.svg" alt="" />
-      <p>
-        Her på siden finder du et udvalg af smukke bonsai skåle. Vi har et bredt
-        sortiment af både indendørs samt udendørs skåle. Skålene findes i mange
-        farver og størrelser.
-      </p>
+      <img id="img1" src="/img/bowl_topimg.webp" alt="" />
+      <img id="img2" src="/img/bowl_topimg_web.webp" alt="" /><div
+        class="first_div"
+      >
+        <h1>Bonsaiskåle</h1>
+        <img class="gren" src="/img/gren.svg" alt="" />
+        <p>
+          Her på siden finder du et udvalg af smukke bonsai skåle. Vi har et
+          bredt sortiment af både indendørs samt udendørs skåle. Skålene findes
+          i mange farver og størrelser.
+        </p>
+      </div>
     </section>
     <section>
       <h2>Bonsaiskåle uden underskål</h2>
       <h3>Indendørs</h3>
-      <div>
+      <div class="div">
         {
           databowl.map((bowlcard) => {
             return <BonsaibowlCard databowl={bowlcard} />;
           })
         }
+        <PlaceholderCard />
+        <PlaceholderCard />
       </div>
     </section>
     <section>
       <h2>Bonsaiskåle med underskål</h2>
-      <h3>udendørs</h3>
-      <!-- <div>
-        <div class="div1">
-          <img src="" alt="" />
-          <div class="">
-            <h3>Bonsaiskål</h3>
-            <h3>Pris 129 DKK</h3>
-          </div>
-          <h4>Sort plettet bonsaiskål med huller i bunden</h4>
-        </div>
-      </div> -->
+      <h3>Udendørs</h3>
+      <div class="div">
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+      </div>
     </section>
     <section>
-      <h2>Japanske skåle</h2>
-      <!-- <div>
-        <BonsaibowlCard />
-        <BonsaibowlCard />
-      </div> -->
+      <h2>Japanske skåle</h2><h3></h3>
+      <div class="div">
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+        <PlaceholderCard />
+      </div>
     </section>
   </main>
 </Layout>
 
 <style>
+  #img2 {
+    display: none;
+  }
   h1 {
     font-size: var(--fs-2);
     font-weight: var(--fw-l);
@@ -115,7 +127,7 @@ console.log(databowl);
   img {
     width: 100vw;
   }
-  div {
+  .div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 3%;
@@ -128,13 +140,69 @@ console.log(databowl);
 
   section:nth-of-type(2) {
     background-color: var(--bg-grey);
+    padding-bottom: 50px;
   }
 
   section:nth-of-type(3) {
     background-color: var(--white);
+    padding-bottom: 50px;
   }
 
   section:nth-of-type(4) {
     background-color: var(--bg-grey);
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: 700px) {
+    p,
+    h2,
+    h3 {
+      text-align: left;
+    }
+    h1 {
+      font-size: var(--fs-1w);
+      font-weight: var(--fw-l);
+    }
+
+    h2 {
+      width: 100%;
+      padding-left: 5%;
+    }
+    h3 {
+      width: 100%;
+      padding-left: 5%;
+    }
+    #img1 {
+      display: none;
+    }
+
+    #img2 {
+      display: block;
+    }
+    .div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+
+    section:nth-of-type(1) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    section:nth-of-type(1) img {
+      grid-column: 2;
+    }
+
+    div:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .first_div {
+      display: block;
+      align-self: center;
+    }
   }
 </style>
