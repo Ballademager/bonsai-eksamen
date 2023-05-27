@@ -43,8 +43,9 @@ console.log(data);
         <p>Husk at tryk : “AFHENTNING I BUTIK” ved køb af planter. Hvis planten købes sammen med andre varer kan vi efter ønske pakke og sende de andre varer.</p>
       </div>
       <a href="/bonsaitrees/"><img src="/img/greenarrow.svg" alt="" />TILBAGE TIL BONSAITRÆER</a></div>
+      <a href="#descript" id="orange" class="pilned"><img src="/img/pil.svg" alt="" /></a>
     </section>
-    <section class="description">
+    <section id="descript" class="description">
       <article class="art1">
         <h2>Beskrivelse</h2>
         <p>
@@ -112,6 +113,9 @@ console.log(data);
 
 
 <style>
+#orange {
+  display: none;
+  }
 
   /* --- General styling --- */
   main {
@@ -204,11 +208,12 @@ console.log(data);
   .info :not(p:last-child) {
     margin-bottom: var(--space-sm);
   }
-  .buy a {
+  .buy a:first-of-type {
     display: flex;
     gap: var(--space-xs);
     font-family: var(--ff-cta);
   }
+
 
   /* --- Tree description --- */
   article {
@@ -243,13 +248,15 @@ console.log(data);
     justify-self: center;
     margin-block: var(--space-lg);
   }
-  @media (width > 750px) {
+ @media (width > 750px) {
     .buy {
         display: grid;
+        position: relative;
         grid-template-columns: 1fr 1fr;
         gap: var(--space-lg);
         padding-inline: var(--space-xl);
         margin-top: 0;
+        z-index: 1;
         border-bottom: 2px solid var(--green);
     }
     .buy > img:first-child {
@@ -286,6 +293,45 @@ h1 {
     p {
         font-size: var(--fs-n);
         text-align: start;
+    }
+    #orange {
+      position: absolute;
+      display: block;
+      padding-top: 1.5vw;
+      bottom: 3vw;
+      left: 50%;
+      z-index: 1;
+      animation: move 3s infinite;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+      }
+
+      60% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+      }
+
+      70% {
+        transform: translateY(2vw);
+        animation-timing-function: ease-out;
+      }
+      80% {
+        transform: translateY(0.5vw);
+        animation-timing-function: ease-in;
+      }
+
+      90% {
+        transform: translateY(2vw);
+        animation-timing-function: ease-out;
+      }
+
+      100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+      }
     }
     .description {
         position: relative;
@@ -379,7 +425,9 @@ grid-row: 1/ span 3;
     .orange_b {
       margin-block: var(--space-xxl);
     }
+  }
 @media (750px < width < 1150px) {
+
 h1 {
     font-size: max(5vw, 50px);
     font-size: var(--fs-1);
@@ -398,6 +446,12 @@ h1 {
   .info :not(p:last-child) {
     margin-bottom: var(--space-xs);
   }
+  #orange {
+      bottom: 3vw;
+    }
+    #orange img {
+      width: 3vw;
+    }
   article > :not(:last-child) {
     margin-bottom: 0;
   }
