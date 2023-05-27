@@ -1,16 +1,17 @@
 ---
-const { databowl } = Astro.props;
 ---
 
-<div class="div1">
-  <a id="black" href="">
-    <img src={databowl.imgsrc} alt={databowl.imgalt} />
-    <div class="overskrift">
-      <h3>{databowl.title}</h3>
-      <h3>{databowl.price}</h3>
-    </div>
-    <h5>{databowl.description}</h5></a
-  >
+<div>
+  <div class="div1">
+    <a id="black" href="">
+      <img src="/img/bluepot2.webp" alt="" />
+      <div class="overskrift">
+        <h3>Bonsaiskål</h3>
+        <h3>Pris 129 DKK</h3>
+      </div>
+      <h5>Blå bonsaiskål i en rund form. Skålen har huller i bunden.</h5>
+    </a>
+  </div>
 </div>
 
 <style>
@@ -54,10 +55,6 @@ const { databowl } = Astro.props;
   @media (min-width: 530px) {
     h3 {
       font-size: var(--fs-4);
-    }
-
-    h3:nth-of-type(2) {
-      font-weight: var(--fw-m);
     }
 
     h5 {
