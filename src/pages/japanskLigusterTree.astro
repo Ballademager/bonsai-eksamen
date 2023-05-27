@@ -1,0 +1,344 @@
+---
+import OrangeButton from "../components/OrangeButton.astro";
+import Layout from "../layout/Layout.astro";
+import TreeCard from "../components/TreeCard.astro";
+const url = "https://bcjykukoxzsusmoltaky.supabase.co/rest/v1/bonsaitrees";
+const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjanlrdWtveHpzdXNtb2x0YWt5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwMTg3ODYsImV4cCI6MjAwMDU5NDc4Nn0.AD5gYYbHDUkLyrwBcKhI3TJgXTSqIj9SSYw9TvhA7kA";
+
+const data = await fetch(url, {
+  method: "GET",
+  headers: {
+    apikey: api,
+  },
+}).then((res) => res.json());
+console.log(data);
+---
+
+<Layout title="Japansk Liguster">
+  <main>
+    <img src="/img/japanskLigusterMobile.webp" alt="Flot Ligustertræ" />
+    <section class="buy">
+      <div class="first_div">
+        <h1>Japansk Liguster</h1>
+        <h4>"Ligustrum Japonicum"</h4>
+        <p>Japansk liguster, er en populær bonsai-art, der stammer fra Japan. Det tilhører olivenfamilien og er hjemmehørende i Østasien, herunder Japan, Kina og Korea.</p>
+      </div>
+
+      <div class="price">
+        <p id="displayed_price">299,00 DKK</p>
+        <p id="displayed_age">Alder: 5 år</p>
+      </div>
+      <form action="">
+        <select name="age" id="age">
+          <option value="5">- 5 år -</option>
+          <option value="8">- 8 år -</option>
+          <option value="13">- 13 år -</option>
+        </select>
+        <button type="submit">- LÆG I KURV -</button>
+      </form>
+      <div class="info">
+        <p>Bonsaitræer vælges på baggrund af alder. Et ældre træ er typisk lidt større (og nemmere at passe), da det har haft længere tid til at udvokse.</p>
+        <p>OBS: planter kan pt kun bestilles til “AFHENTNING I BUTIK” og skal afhentes i butikken Ålekistevej 63.</p>
+        <p>Husk at tryk : “AFHENTNING I BUTIK” ved køb af planter. Hvis planten købes sammen med andre varer kan vi efter ønske pakke og sende de andre varer.</p>
+      </div>
+      <a href="/bonsaitrees/"><img src="/img/greenarrow.svg" alt="" />TILBAGE TIL BONSAITRÆER</a>
+    </section>
+    <section class="description">
+      <article class="art1">
+        <h2>Beskrivelse</h2>
+        <p>
+          Japansk liguster bonsaitræer har en lang historie inden for bonsai-dyrkning. Bonsai som kunstform har rødder i Kina og blev senere adopteret og forfinet af japanske mestre. Traditionen med at dyrke og forme japanske ligustrum-bonsaitræer
+          har udviklet sig i løbet af århundreder og er blevet dybt forankret i japansk kultur og æstetik.
+        </p>
+        <p>
+          Japansk liguster er kendt for sine små, mørkegrønne blade og forgrenede struktur, hvilket gør den velegnet til bonsai-dyrkning. Bladene er læderagtige og elliptiske i form, og de skaber et kompakt og fyldigt løvmasse, når træet dyrkes og
+          formes som en bonsai.
+        </p>
+        <img src="" alt="" />
+      </article>
+      <article class="art2">
+        <h2>Kendetegn</h2>
+        <p>
+          Japansk liguster bonsaitræer er ofte kendt for deres evne til at danne tætte og komplekse netværk af grene og for at udvikle karakteristiske luftrødder. Bonsai-kunstnere bruger præcise beskæringsteknikker og træning for at forme træet i
+          ønskede stilarter som den formelle opstammede stil eller den naturlige, mere vildtvoksende stil.
+        </p>
+        <p>
+          Japanske liguster bonsaitræer udstråler en følelse af elegance, ro og balance. De er ofte udstillet i bonsai-udstillinger og beundres for deres skønhed og den dybe forbindelse, de har med naturen. Ligustrum japonicum-bonsaitræer
+          symboliserer også styrke, vedholdenhed og visdom, da de kan blive gamle og udvikle karakter og patina gennem årene med omhyggelig pleje og træning.
+        </p>
+      </article>
+      <article class="art3">
+        <h2>Beskæring</h2>
+        <img src="" alt="" />
+        <p>Nye skud kan med fordel beskæres når der er vokset en 5-6 bladpar frem. Klip tilbage til 1-3 bladpar. Større grene kan fjernes hele året.</p>
+      </article>
+      <article class="art4">
+        <h2>Placering</h2>
+        <img src="" alt="" />
+        <p>
+          Japansk liguster trives bedst i et vindue med direkte sol. Gerne et vindue med sol hele dagen men ellers et vindue med enten morgen- eller aftensol. Indendørs bør planten have så meget lys som muligt. Udendørs kan planten godt få
+          svedne/rødlige blade, hvis den står direkte i solen.
+        </p>
+      </article>
+      <article class="art5">
+        <h2>Vanding</h2>
+        <img src="" alt="" />
+        <p>
+          Mærk med en finger på jorden om den er tør, hvis det er tilfældet så skal planten vandes. Tjek dagligt med fingeren og overbrus den i stedet for at vande i skålen(der er hul i bunden af skålen, hvilket gør overbrusning let). Japansk
+          liguster vil hænge med bladene når den mangler vand. Den rejser sig dog hurligt igen når den bliver vandet.
+        </p>
+      </article>
+      <article class="art6">
+        <h2>Ompotning</h2>
+        <img src="" alt="" />
+        <p>
+          Marts til maj. Vær lidt forsigtig når du ompotter. Vi anbefaler at planten beskæres så kraftigt som muligt ca. 14 dage før ompotning. Japansk liguster bør overbruses dagligt med forstøver de første 1-2 uger efter ompotning. Dette vil
+          minimere bladtabet.
+        </p>
+      </article>
+    </section>
+    <div class="dividerline"></div>
+    <section class="shopsec">
+      <div class="container">
+        <div class="card_scroller scroll_snap">
+          {
+            data.map((treecard) => {
+              return (
+                <div class="card">
+                  <TreeCard data={treecard} size="small" />
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+      <OrangeButton link="/bonsaitrees/" linktext="BONSAITRÆER" />
+    </section>
+  </main>
+</Layout>
+
+
+
+<style>
+  h1 + h4 {
+    margin-block: var(--space-xs);
+  }
+  /* --- General styling --- */
+  main {
+    display: grid;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--green);
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-l);
+  }
+  p {
+    font-family: var(--ff-text);
+    font-size: var(--fs-p);
+    text-align: center;
+  }
+  section {
+    /* align-self: center; */
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section div {
+    display: grid;
+    justify-items: center;
+  }
+  section p {
+    max-width: 80vw;
+    line-height: 1.4;
+  }
+
+  /*  --- First section ---  */
+  h1 {
+    font-size: calc(var(--fs-2) * 1.2);
+  }
+  h4 {
+    font-size: var(--fs-4);
+  }
+  .price {
+    margin-block: var(--space-sm);
+  }
+  .price p:first-child {
+    font-size: calc(var(--fs-3) * 1.1);
+    font-family: var(--ff-cta);
+  }
+  .price p:last-child {
+    font-size: var(--fs-n);
+    /* font-size: 18px; */
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  form > * {
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-n);
+    font-size: var(--fs-n)
+    width: 150px;
+    width: 11rem;
+    text-align: center;
+  }
+  form select {
+    border: 2px solid var(--green);
+    padding-block: var(--space-xxs);
+  }
+  form button {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding-block: calc(var(--space-xs)*.8);
+  }
+  .info {
+    margin-block: var(--space-lg);
+  }
+  .info :not(p:last-child) {
+    margin-bottom: var(--space-sm);
+  }
+  .buy a {
+    display: flex;
+    gap: var(--space-xs);
+    font-family: var(--ff-cta);
+  }
+
+  /* --- Tree description --- */
+  article {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    padding-block: var(--space-sm);
+  }
+  article:nth-of-type(2n + 1) {
+    background-color: var(--bg-grey);
+  }
+  article:last-of-type {
+    background-color: var(--white);
+  }
+  h2 {
+    font-size: var(--fs-2);
+    margin-bottom: var(--space-sm);
+  }
+  article > :not(:last-child) {
+    margin-bottom: var(--space-sm);
+  }
+  .dividerline {
+    height: 1px;
+    border-radius: 50px;
+    width: 80%;
+    background-color: var(--green);
+    margin-block: var(--space-lg);
+    margin-inline: auto;
+  }
+
+  /* --- horizontal scrolling ---- */
+  .container {
+    inline-size: 100%;
+    margin-bottom: var(--space-lg);
+    /* margin-inline: auto; */
+  }
+  .card_scroller {
+    width: 100%;
+    gap: calc(var(--space-xl) * 1);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    /* padding-left: 12vw; */
+  }
+  .scroll_snap {
+    scroll-snap-type: inline mandatory;
+    /* scroll-pading-inline: 12vw; */
+  }
+  .scroll_snap > * {
+    scroll-snap-align: center;
+  }
+  .card {
+    inline-size: 75vw;
+    padding-bottom: var(--space-md);
+  }
+
+  .buy a {
+    color: var(--green);
+  }
+  .shopsec {
+    margin-bottom: var(--space-lg);
+  }
+  @media (width > 750px) {
+    .shopsec {
+      padding-top: var(--space-xl);
+      margin-bottom: var(--space-lg);
+    }
+    .container {
+      /* inline-size: min(100% - 4rem, 100rem); */
+      inline-size: 100%;
+      /* width: 100%; */
+      /* margin-inline: auto; */
+    }
+    .card_scroller {
+      width: 100%;
+      display: grid;
+      gap: calc(var(--space-xl) * 1.3);
+      padding-inline: var(--space-xl);
+      grid-auto-flow: column;
+      grid-auto-columns: 18%;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+    }
+    .scroll_snap {
+      scroll-snap-type: inline mandatory;
+      /* scroll-pading-inline: 1rem; */
+    }
+    .scroll_snap > * {
+      scroll-snap-align: center;
+    }
+    .card {
+      inline-size: 20vw;
+      /* height: 100px; */
+      /* background-color: hotpink; */
+    }
+  }
+</style>
+
+<script>
+    window.addEventListener("load", pricing);
+
+    function pricing() {
+    const priceElement = document.getElementById("displayed_price");
+    const ageElement = document.getElementById("displayed_age");
+    const ageSelect = document.getElementById("age");
+
+    // Priserne/alderen for de forskellige valgmuligheder defineres i et array
+    const prices = {
+      "5": "299,00 DKK",
+      "8": "449,00 DKK",
+      "13": "799,00 DKK"
+    };
+    const ages = {
+      "5": "Alder: 5 år",
+      "8": "Alder: 8 år",
+      "13": "Alder: 13 år"
+    };
+
+    // Funktion som updaterer den viste pris/alder
+    function updatePrice() {
+      const selectedOption = ageSelect.value;
+      const price = prices[selectedOption];
+      const age = ages[selectedOption];
+      priceElement.textContent = price;
+      ageElement.textContent = age;
+    }
+
+    // Tilføjer eventListener når der vælges en ny alder
+    ageSelect.addEventListener("change", updatePrice);
+    ageSelect.addEventListener("change", updatePrice);
+    }
+  </script>
