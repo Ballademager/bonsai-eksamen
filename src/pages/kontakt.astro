@@ -1,0 +1,77 @@
+---
+import Layout from "../layout/Layout.astro";
+---
+
+<Layout title="Kontakt">
+  <main>
+    <section>
+      <div class="image_container"><img class="splashimage" src="/img/kontakt_tree.webp" alt="Baggrundsbillede af et træ" /></div>
+      <h1>Kontakt</h1>
+      <p>Hos Bonsaihjørnet værdsætter vi dine spørgsmål, kommentarer og feedback. Vi er her for at sikre, at din oplevelse med os er så positiv og behagelig som muligt.</p>
+      <p>Har du spørgsmål om vores produkter, pasningsvejledninger eller noget andet relateret til bonsai-træer, så er du mere end velkommen til at kontakte os. Vi står klar til at hjælpe dig.</p>
+    </section>
+    <section class="SoMe">
+      <h2>Sociale Medier</h2>
+      <p>Vi vil også gerne opfordre dig til at følge os på vores facebookside, hvor du kan deltage i vores bonsai-fællesskab, få opdateringer om nye produkter og lære mere om pleje og vedligeholdelse af dine bonsai-træer.</p>
+      <img src="/img/facebook_logo.svg" alt="Link til facebook" />
+    </section>
+    <section class="kontaktinfo">
+      <div>
+        <p>Telefon: +50 54 80 62</p>
+        <p>(Vi besvarer kun i butikkens åbningstid)</p>
+        <p>E-mail: info@bonsaihjørnet.dk</p>
+      </div>
+      <div>
+        <p>Åbningstider:</p>
+        <p>Tirsdag-Fredag: 15-18</p>
+        <p>Lørdag: 12-15</p>
+      </div>
+      <p>Vi bestræber os altid på at besvare alle henvendelser inden for en rimelig tidsramme.</p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .image_container {
+    /* background-color: lightgreen; */
+    /* padding: 3rem; */
+    width: 100%;
+    /* height: 200px; */
+    border-bottom: 2px solid var(--green);
+  }
+  .splashimage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: bottom left;
+  }
+  h1,
+  h2 {
+    font-family: var(--ff-cta);
+    color: var(--green);
+    font-weight: var(--fw-l);
+  }
+  p {
+    color: var(--almost-black);
+    font-family: var(--ff-text);
+  }
+  p {
+    font-size: var(--fs-p);
+    line-height: 1.4;
+    max-width: 80vw;
+    text-align: center;
+  }
+  h1 {
+    font-size: var(--fs-2);
+  }
+  .SoMe {
+    background: var(--bg-grey);
+  }
+  .SoMe img {
+    width: 80px;
+  }
+  section {
+    display: grid;
+    justify-items: center;
+  }
+</style>
