@@ -5,11 +5,13 @@ const { databowl } = Astro.props;
 <div class="div1">
   <a id="black" href="">
     <img src={databowl.imgsrc} alt={databowl.imgalt} />
-    <div class="overskrift">
-      <h3>{databowl.title}</h3>
-      <h3>{databowl.price}</h3>
-    </div>
-    <h5>{databowl.description}</h5></a
+    <div class="padding">
+      <div class="overskrift">
+        <h3>{databowl.title}</h3>
+        <h3>{databowl.price}</h3>
+      </div>
+      <h5>{databowl.description}</h5>
+    </div></a
   >
 </div>
 
@@ -87,10 +89,16 @@ const { databowl } = Astro.props;
   @media (min-width: 1150px) {
     h3 {
       font-size: var(--fs-l);
+      padding-top: 6px;
+      padding-bottom: 11px;
     }
 
     h5 {
       font-size: var(--fs-n);
+    }
+
+    .padding {
+      padding: 2%;
     }
   }
 </style>
