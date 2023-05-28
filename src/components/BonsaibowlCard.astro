@@ -11,51 +11,35 @@ const { databowl } = Astro.props;
         <h3>{databowl.price}</h3>
       </div>
       <h5>{databowl.description}</h5>
-    </div></a
-  >
-</div>
+      <h5 id="varianter">{databowl.flere_varianter}</h5>
+    </div>
+  </a>
 
-<style>
-  #black {
-    color: var(--almost-black);
-  }
-  .overskrift {
-    display: flex;
-    justify-content: space-between;
-  }
-  h4 {
-    font-weight: var(--fw-p);
-  }
-  .div1 {
-    /* width: 100%; */
-    padding: 5%;
-    padding-bottom: 6%;
-  }
-  img {
-    width: 100%;
-  }
-  h3 {
-    color: var(--green);
-    font-family: var(--ff-cta);
-    font-weight: var(--fw-l);
-    font-size: var(--fs-p);
-    padding-bottom: 2px;
-  }
-
-  h3:nth-of-type(2) {
-    font-weight: var(--fw-m);
-  }
-
-  h5 {
-    font-family: var(--ff-text);
-    font-size: var(--fs-xs);
-    font-weight: var(--fs-l);
-    line-height: 1.2;
-  }
-
-  @media (min-width: 530px) {
+  <style>
+    #black {
+      color: var(--almost-black);
+    }
+    .overskrift {
+      display: flex;
+      justify-content: space-between;
+    }
+    h4 {
+      font-weight: var(--fw-p);
+    }
+    .div1 {
+      /* width: 100%; */
+      padding: 5%;
+      padding-bottom: 6%;
+    }
+    img {
+      width: 100%;
+    }
     h3 {
-      font-size: var(--fs-4);
+      color: var(--green);
+      font-family: var(--ff-cta);
+      font-weight: var(--fw-l);
+      font-size: var(--fs-p);
+      padding-bottom: 2px;
     }
 
     h3:nth-of-type(2) {
@@ -63,42 +47,59 @@ const { databowl } = Astro.props;
     }
 
     h5 {
-      font-size: var(--fs-p);
-    }
-  }
-  @media (min-width: 700px) {
-    h3 {
-      font-size: var(--fs-p);
-    }
-
-    h5 {
+      font-family: var(--ff-text);
       font-size: var(--fs-xs);
-    }
-  }
-
-  @media (min-width: 880px) {
-    h3 {
-      font-size: var(--fs-n);
+      font-weight: var(--fs-l);
+      line-height: 1.2;
     }
 
-    h5 {
-      font-size: var(--fs-sm);
-    }
-  }
+    @media (min-width: 530px) {
+      h3 {
+        font-size: var(--fs-4);
+      }
 
-  @media (min-width: 1150px) {
-    h3 {
-      font-size: var(--fs-l);
-      padding-top: 6px;
-      padding-bottom: 11px;
+      h3:nth-of-type(2) {
+        font-weight: var(--fw-m);
+      }
+
+      h5 {
+        font-size: var(--fs-p);
+      }
+    }
+    @media (min-width: 700px) {
+      h3 {
+        font-size: var(--fs-p);
+      }
+
+      h5 {
+        font-size: var(--fs-xs);
+      }
     }
 
-    h5 {
-      font-size: var(--fs-n);
+    @media (min-width: 880px) {
+      h3 {
+        font-size: var(--fs-n);
+      }
+
+      h5 {
+        font-size: var(--fs-sm);
+      }
     }
 
-    .padding {
-      padding: 2%;
+    @media (min-width: 1150px) {
+      h3 {
+        font-size: var(--fs-l);
+        padding-top: 6px;
+        padding-bottom: 11px;
+      }
+
+      h5 {
+        font-size: var(--fs-n);
+      }
+
+      .padding {
+        padding: 2%;
+      }
     }
-  }
-</style>
+  </style>
+</div>
