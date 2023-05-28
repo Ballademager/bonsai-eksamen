@@ -17,10 +17,15 @@
 </div>
 
 <style>
+  .padding {
+    padding: 2%;
+  }
   #black {
     color: var(--almost-black);
   }
   .overskrift {
+    padding-top: 1%;
+    padding-bottom: 2%;
     display: flex;
     justify-content: space-between;
   }
@@ -64,6 +69,10 @@
     }
   }
   @media (min-width: 700px) {
+    .overskrift {
+      padding-top: 4%;
+      padding-bottom: 4%;
+    }
     h3 {
       font-size: var(--fs-p);
     }
@@ -86,16 +95,10 @@
   @media (min-width: 1150px) {
     h3 {
       font-size: var(--fs-l);
-      padding-top: 6px;
-      padding-bottom: 11px;
     }
 
     h5 {
       font-size: var(--fs-n);
-    }
-
-    .padding {
-      padding: 2%;
     }
   }
 </style>
