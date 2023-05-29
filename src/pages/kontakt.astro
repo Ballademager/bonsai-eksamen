@@ -7,7 +7,7 @@ import Layout from "../layout/Layout.astro";
     <section class="firstsec">
       <div class="image_container"><img class="splashimage" src="/img/kontakt_tree.webp" alt="Baggrundsbillede af et træ" /></div>
       <div class="rightside">
-        <h1>Kontakt børge</h1>
+        <h1>Kontakt</h1>
         <p>Hos Bonsaihjørnet værdsætter vi dine spørgsmål, kommentarer og feedback. Vi er her for at sikre, at din oplevelse med os er så positiv og behagelig som muligt.</p>
         <p>Har du spørgsmål om vores produkter, pasningsvejledninger eller noget andet relateret til bonsaitræer, så er du mere end velkommen til at kontakte os. Vi står klar til at hjælpe dig.</p>
       </div>
@@ -15,7 +15,7 @@ import Layout from "../layout/Layout.astro";
     <section class="SoMe">
       <h2>Sociale Medier</h2>
       <p>Vi vil også gerne opfordre dig til at følge os på vores facebookside, hvor du kan deltage i vores bonsai-fællesskab, få opdateringer om nye produkter og lære mere om pleje og vedligeholdelse af dine bonsaitræer.</p>
-      <img src="/img/facebook_logo.svg" alt="Link til facebook" />
+      <a href="https://www.facebook.com/"><img src="/img/f_logo.png" alt="Link til facebook" /></a>
     </section>
     <section class="kontaktinfo">
       <div>
@@ -80,9 +80,12 @@ import Layout from "../layout/Layout.astro";
   .SoMe {
     background: var(--bg-grey);
   }
-  .SoMe img {
+  .SoMe a {
     width: 70px;
     margin-block: var(--space-sm);
+  }
+  .SoMe img {
+    width: inherit;
   }
   .kontaktinfo div p {
     margin-block: var(--space-xxs);
@@ -158,7 +161,7 @@ import Layout from "../layout/Layout.astro";
       grid-area: 2/1/3/2;
       align-self: center;
     }
-    .SoMe img {
+    .SoMe a {
       width: 120px;
       margin-block: 0;
       grid-area: 2/2/3/3;
