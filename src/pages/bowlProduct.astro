@@ -38,9 +38,10 @@ import Layout from "../layout/Layout.astro";
     <div class="grid_1-1">
     <div class="grid">
         <img id="big_img" src="/img/potproduct1.webp" alt="">
-        <div class="flex"><img src="/img/potproduct2.webp" alt="">
-        <img src="/img/potproduct3.webp" alt="">
-        <img src="/img/potproduct4.webp" alt=""></div>
+        <div class="flex">
+            <img class="work" src="/img/potproduct2.webp" alt="">
+        <img class="work" src="/img/potproduct3.webp" alt="">
+        <img class="work" src="/img/potproduct4.webp" alt=""></div>
     </div>
     <section>
       <h1>Kawaguchiskål</h1>
@@ -226,33 +227,32 @@ form {
 
 
   @media (min-width: 825px) {
-
-    h1{font-size: var(--fs-2w);}
-
-    p{font-size: var(--fs-n);}
-
+.work{width: 50%;
+height: 40%;
+object-fit: cover;}
+   
     main{padding-left: 6%;
     padding-right: 6%;
-padding-top: 4%;}
+padding-top: 4%;
+overflow: hidden;}
 
     .grid_1-1{display: grid;
     grid-template-columns: 1fr 1fr;
-height: 95vh;}
+height: 90vh;}
 
 #big_img{place-self: end;
-min-width: 390px;
+min-width: 360px;
 padding-top: 0;}
 .grid{display: grid;
 grid-template-rows: 1fr 1fr;
-padding: 0 12% 0% 12%}
+padding: 0 10% 0% 12%}
 
 img{padding: 1%}
 .flex{display: flex;
 grid-row: 2;
 justify-content: space-between;
 }
-.flex img{height: 30%;
-width: auto;
+.flex img{
 padding-top: 2%;}
 
 a{position: relative;
@@ -268,16 +268,30 @@ section{padding-top: 2%;
     padding-bottom: 0;
 text-align: start;
 align-items: flex-start;
+padding-left: 10%;;
 }
 
 .carousel{display: none;}
   }
 
+  @media (min-width: 1110px) { h1{font-size: var(--fs-2w);}
 
- @media (min-width: 1500px) {
-.flex img{height: 34%;
+p{font-size: var(--fs-n);}
+}
+ /* @media (min-width: 1350px) {
+
+#big_img{
+width: 400px;}
+.flex img{height: 25%;
 width: auto;
 padding-top: 2%;}}
+@media (min-width: 1700px) {
+
+#big_img{
+min-width: 600px;}
+.flex img{height: 37%;
+width: auto;
+padding-top: 2%;}} */
 
  
 </style>
