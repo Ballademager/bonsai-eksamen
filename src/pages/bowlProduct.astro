@@ -42,7 +42,7 @@ import Layout from "../layout/Layout.astro";
 <style>
   .carousel {
     position: relative;
-    height: 310px;
+    height: 320px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -50,9 +50,10 @@ import Layout from "../layout/Layout.astro";
 
   .carousel__image {
     /* width: 100%; */
+    height: 100%;
     width: 100%;
-    height: 300px;
     object-fit: cover;
+    /* object-position: center; */
   }
 
   .carousel__track-container {
@@ -79,17 +80,17 @@ import Layout from "../layout/Layout.astro";
 
   .carousel__button {
     position: absolute;
-    top: 99%;
+    top: 325px;
     background: transparent;
     border: 0;
     cursor: pointer;
   }
 
   .carousel__button--left {
-    left: 30%;
+    left: 25%;
   }
   .carousel__button--right {
-    right: 30%;
+    right: 25%;
   }
   .carousel__button img {
     width: 20px;
@@ -98,7 +99,7 @@ import Layout from "../layout/Layout.astro";
   .carousel__nav {
     display: flex;
     justify-content: center;
-    padding: 0px 0;
+    padding: 8px;
   }
 
   .carousel__indicator {
@@ -106,6 +107,7 @@ import Layout from "../layout/Layout.astro";
     border-radius: 50%;
     width: 12px;
     height: 12px;
+
     background-color: var(--green);
     opacity: 30%;
     margin: 0 5px;
