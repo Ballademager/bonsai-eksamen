@@ -35,6 +35,14 @@ import Layout from "../layout/Layout.astro";
         <button class="carousel__indicator"></button>
       </div>
     </div>
+    <div class="grid_1-1">
+    <div class="grid">
+        <img id="big_img" src="/img/potproduct1.webp" alt="">
+        <div class="flex">
+            <img class="work" src="/img/potproduct2.webp" alt="">
+        <img class="work" src="/img/potproduct3.webp" alt="">
+        <img class="work" src="/img/potproduct4.webp" alt=""></div>
+    </div>
     <section>
       <h1>Kawaguchiskål</h1>
       <p id="p1">
@@ -59,12 +67,13 @@ import Layout from "../layout/Layout.astro";
     </p>
     <p><span> Produktbeskrivelse</span><br>
         Bonsai skålen har en smuk blå glasur, som changerer i lyset. Det giver skålen et helt særligt udtryk. Skålen er fremragende til bonsaitræer grundet den lave højde, som begrænser rødderne i at gro (hvilket man ønsker for bonsai træer). Derudover er der hul i bunden, så overskydende vand kan løbe fra.</p>
-    </section>
+    </section></div>
+    <a href="/bonsaitrees/"><img src="/img/greenarrow.svg" alt="" />TILBAGE TIL BONSAITRÆER</a>
   </main>
 </Layout>
 
 <style>
-
+.grid{display: none;}
     #p1{padding-bottom: 6%;}
 
     #p2{padding-top: 11%;
@@ -215,9 +224,76 @@ form {
     display: none;
   }
 
-  @media (min-width: 700px) {
-    
+
+
+  @media (min-width: 825px) {
+.work{width: 50%;
+height: 40%;
+object-fit: cover;}
+   
+    main{padding-left: 6%;
+    padding-right: 6%;
+padding-top: 4%;
+overflow: hidden;}
+
+    .grid_1-1{display: grid;
+    grid-template-columns: 1fr 1fr;
+height: 90vh;}
+
+#big_img{place-self: end;
+min-width: 360px;
+padding-top: 0;}
+.grid{display: grid;
+grid-template-rows: 1fr 1fr;
+padding: 0 10% 0% 12%}
+
+img{padding: 1%}
+.flex{display: flex;
+grid-row: 2;
+justify-content: space-between;
+}
+.flex img{
+padding-top: 2%;}
+
+a{position: relative;
+display: flex;
+gap: var(--space-xs);
+font-family: var(--ff-cta);
+color: var(--green);
+align-items: center;
+left: 13%;
+top: -15px;
+}
+section{padding-top: 2%;
+    padding-bottom: 0;
+text-align: start;
+align-items: flex-start;
+padding-left: 10%;;
+}
+
+.carousel{display: none;}
   }
+
+  @media (min-width: 1110px) { h1{font-size: var(--fs-2w);}
+
+p{font-size: var(--fs-n);}
+}
+ /* @media (min-width: 1350px) {
+
+#big_img{
+width: 400px;}
+.flex img{height: 25%;
+width: auto;
+padding-top: 2%;}}
+@media (min-width: 1700px) {
+
+#big_img{
+min-width: 600px;}
+.flex img{height: 37%;
+width: auto;
+padding-top: 2%;}} */
+
+ 
 </style>
 
 
