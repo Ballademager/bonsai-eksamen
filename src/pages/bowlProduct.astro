@@ -68,12 +68,12 @@ import Layout from "../layout/Layout.astro";
     <p><span> Produktbeskrivelse</span><br>
         Bonsai skålen har en smuk blå glasur, som changerer i lyset. Det giver skålen et helt særligt udtryk. Skålen er fremragende til bonsaitræer grundet den lave højde, som begrænser rødderne i at gro (hvilket man ønsker for bonsai træer). Derudover er der hul i bunden, så overskydende vand kan løbe fra.</p>
     </section></div>
-    <a href="/bonsaitrees/"><img src="/img/greenarrow.svg" alt="" />TILBAGE TIL BONSAITRÆER</a>
+    <a href="/bonsaitrees/"><img src="/img/greenarrow.svg" alt="" />TILBAGE TIL BONSAISKÅLE</a>
   </main>
 </Layout>
 
 <style>
-.grid{display: none;}
+.grid, a{display: none;}
     #p1{padding-bottom: 6%;}
 
     #p2{padding-top: 11%;
@@ -181,7 +181,7 @@ form {
 
   .carousel__button {
     position: absolute;
-    top: 325px;
+    top: 332px;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -194,20 +194,20 @@ form {
     right: 25%;
   }
   .carousel__button img {
-    width: 20px;
+    width: 30px;
   }
 
   .carousel__nav {
     display: flex;
     justify-content: center;
-    padding: 8px;
+    padding: 13px;
   }
 
   .carousel__indicator {
     border: 0;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
 
     background-color: var(--green);
     opacity: 30%;
@@ -278,21 +278,14 @@ padding-left: 10%;;
 
 p{font-size: var(--fs-n);}
 }
- /* @media (min-width: 1350px) {
+ 
+@media (min-width: 1450px) {
+    .grid_1-1{height: 92vh;}
 
-#big_img{
-width: 400px;}
-.flex img{height: 25%;
-width: auto;
-padding-top: 2%;}}
-@media (min-width: 1700px) {
+a{top: 0;}
 
-#big_img{
-min-width: 600px;}
-.flex img{height: 37%;
-width: auto;
-padding-top: 2%;}} */
-
+main{padding-bottom: 3%;}
+}
  
 </style>
 
