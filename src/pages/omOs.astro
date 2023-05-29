@@ -47,11 +47,13 @@ import Layout from "../layout/Layout.astro";
   </section>
   <div class="line"></div>
   <section class="last">
-    <p>
-      Vi er taknemmelige for at være en del af det danske bonsaifællesskab og ser frem til at være din partner på din bonsairejse. Uanset om du er nybegynder eller erfaren, er du velkommen hos os. Vi stræber efter at give vores kunder den bedste
-      oplevelse, kvalitet og service.
-    </p>
-    <p>Tak fordi du besøger Bonsai Hjørnet. Vi ser frem til at dele vores passion og hjælpe dig med at skabe din egen lille bonsaiverden.</p>
+    <div>
+      <p>
+        Vi er taknemmelige for at være en del af det danske bonsaifællesskab og ser frem til at være din partner på din bonsairejse. Uanset om du er nybegynder eller erfaren, er du velkommen hos os. Vi stræber efter at give vores kunder den bedste
+        oplevelse, kvalitet og service.
+      </p>
+      <p>Tak fordi du besøger Bonsai Hjørnet. Vi ser frem til at dele vores passion og hjælpe dig med at skabe din egen lille bonsaiverden.</p>
+    </div>
     <img src="/img/bottom_tree.webp" alt="" />
   </section>
 </Layout>
@@ -195,6 +197,7 @@ import Layout from "../layout/Layout.astro";
     }
     .history {
       grid-template-columns: 1fr 1fr;
+      align-items: center;
     }
     .left {
       display: grid;
@@ -209,6 +212,21 @@ import Layout from "../layout/Layout.astro";
     }
     .imgdiv img {
       max-width: 35vw;
+    }
+    .last {
+      padding-top: 0;
+    }
+    .last div,
+    .last img {
+      /* place-self: center; */
+      grid-area: 1/1/2/2;
+    }
+    .last div {
+      align-self: center;
+      justify-self: start;
+      max-width: max(30vw, 360px);
+      margin-left: min(8vw, 8rem);
+      z-index: 1;
     }
     /* .history img:nth-of-type(1),
     .history img:nth-of-type(2) {
@@ -266,12 +284,31 @@ import Layout from "../layout/Layout.astro";
     }
   }
   @media (750px < width < 930px) {
+    .last div {
+      margin-left: min(4vw, 8rem);
+      max-width: max(30vw, 340px);
+    }
   }
   @media (750px < width < 1190px) {
     .goal {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: var(--space-lg);
+    }
+    .left {
+      display: grid;
+      align-self: center;
+      max-width: 45vw;
+      justify-self: end;
+      gap: var(--space-md);
+    }
+    .imgdiv img {
+      max-width: 45vw;
+    }
+    .leftside {
+      align-content: center;
+      max-width: 30vw;
+      margin-left: max(80px, 10vw);
     }
   }
   @media (500px < width < 750px) {
