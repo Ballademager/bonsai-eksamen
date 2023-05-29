@@ -19,7 +19,9 @@ const { data , size} = Astro.props;
     align-items: center;
   }
   a {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--almost-black);
   }
   h3,
@@ -39,9 +41,10 @@ const { data , size} = Astro.props;
   h5 {
     font-size: var(--fs-p);
     font-weight: var(--fs-l);
+    align-self: center;
     text-align: center;
     line-height: 1.4;
-    max-width: 75vw;
+    max-width: 80vw;
   }
 
   @media (width > 750px) {
