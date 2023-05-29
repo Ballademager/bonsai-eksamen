@@ -35,11 +35,103 @@ import Layout from "../layout/Layout.astro";
         <button class="carousel__indicator"></button>
       </div>
     </div>
-    <p>bauidhaiudhauwidhaiuhdiuawhdiuawh</p>
+    <section>
+      <h1>Kawaguchiskål</h1>
+      <p id="p1">
+        Rund bonsaiskål dyppet i koboltblå glasur. Skålen har et helt særligt
+        udtryk, da farven changerer smukt i lys.
+      </p>
+
+      <div class="size">
+        <p id="displayed_price">79,00 DKK</p>
+        <p id="displayed_size">Størrelse: S (17cm x 13,5cm x 8,5cm)</p>        
+      </div>
+      <p>Vælg størrelse:</p>
+      <form action="">
+        <select name="size" id="size">
+          <option value="1">- SMALL -</option>
+          <option value="2">- MEDIUM -</option>
+          <option value="3">- LARGE -</option>
+        </select>
+        <button type="submit">- LÆG I KURV -</button>
+      </form>
+      <p id="p2"><span> OBS:</span> hvis du har shoppet bonsai træer (og trykket “AFHENTNING I BUTIK”): ønsker du at købe andre produkter, kan vi efter ønske pakke og sende de andre varer.
+    </p>
+    <p><span> Produktbeskrivelse</span><br>
+        Bonsai skålen har en smuk blå glasur, som changerer i lyset. Det giver skålen et helt særligt udtryk. Skålen er fremragende til bonsaitræer grundet den lave højde, som begrænser rødderne i at gro (hvilket man ønsker for bonsai træer). Derudover er der hul i bunden, så overskydende vand kan løbe fra.</p>
+    </section>
   </main>
 </Layout>
 
 <style>
+
+    #p1{padding-bottom: 6%;}
+
+    #p2{padding-top: 11%;
+    padding-bottom: 11%;
+font-size: var(--fs-sm);}
+
+    .size{padding-bottom: 5%;}
+h1{font-size: var(--fs-2);
+font-family: var(--ff-cta);
+color: var(--green);
+font-weight: var(--fw-l);
+padding-bottom: 16px;}
+
+p{
+    font-family: var(--ff-text);
+    font-size: var(--fs-p);
+
+}
+
+span{
+    font-weight: 600;
+    color: var(--almost-black);
+}
+
+section{display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding-left: 12%;
+padding-right: 12%;
+padding-top: 8%;
+padding-bottom: 8%;
+}
+
+#displayed_price{font-size: var(--fs-4);
+    font-family: 
+font-weight: ;}
+
+/*knap*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  form > * {
+    font-family: var(--ff-cta);
+    font-weight: var(--fw-n);
+    font-size: var(--fs-n)
+    width: 150px;
+    width: 11rem;
+    text-align: center;
+  }
+  form select {
+    border: 2px solid var(--green);
+    padding-block: var(--space-xxs);
+  }
+  select:focus-visible {
+  outline: none;
+}
+  form button {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding-block: calc(var(--space-xs)*.8);
+  }
+
+/*slider*/
   .carousel {
     position: relative;
     height: 320px;
@@ -124,44 +216,45 @@ import Layout from "../layout/Layout.astro";
   }
 </style>
 
-<!-- <script>
-  const track = document.querySelector(".carousel__track") as HTMLElement;
-  const slides = Array.from(track.children as HTMLCollectionOf<HTMLElement>);
-  const nextButton = document.querySelector(".carousel__button--right");
-  const prevButton = document.querySelector(".carousel__button--left");
-  const dotsNav = document.querySelector(".carousel__nav");
-  const dots = Array.from(dotsNav.children);
-
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  //   console.log(slideWidth);
-
-  //arrange the slides next to one another
-
-  //   slides[0].style.left = slideWidth * 0 + "px";
-  //   slides[1].style.left = slideWidth * 1 + "px";
-  //   slides[2].style.left = slideWidth * 2 + "px";
-  //   slides[3].style.left = slideWidth * 3 + "px";
-  const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + "px";
-  };
-
-  slides.forEach(setSlidePosition);
-
-  //when i click left, move slides to the left
-
-  //when i click right, move slides to the right
-  nextButton.addEventListener("click", (e) => {
-    const currentSlide = track.querySelector(".current-slide");
-    const nextSlide = currentSlide.nextElementSibling as HTMLElement;
-    const amountToMove = parseFloat(nextSlide.style.left);
-    //move to the next slide
-    track.style.transform = "translateX(-" + amountToMove + ")";
-  });
-
-  //when i click the nav indicators, move to that slide
-</script> -->
 
 <script>
+    //JS på størrelse
+    window.addEventListener("load", pricing);
+
+    function pricing() {
+    const priceElement = document.getElementById("displayed_price");
+    const sizeElement = document.getElementById("displayed_size");
+    const sizeSelect = document.getElementById("size") as HTMLSelectElement;
+
+    // Priserne/alderen for de forskellige valgmuligheder defineres i et array
+    const prices = {
+      "1": "79,00 DKK",
+      "2": "269,00 DKK",
+      "3": "399,00 DKK"
+    };
+    const sizes = {
+      "1": "Størrelse: S (17cm x 13,5cm x 8,5cm)",
+      "2": "Størrelse: M (23cm x 18,5cm x 8,5cm)",
+      "3": "Størrelse: L (31cm x 27cm x 8,5cm)"
+    };
+
+    // Funktion som updaterer den viste pris/alder
+    function updatePrice() {
+      const selectedOption = sizeSelect.value;
+      const price = prices[selectedOption];
+      const size = sizes[selectedOption];
+      priceElement.textContent = price;
+      sizeElement.textContent = size;
+    }
+
+    // Tilføjer eventListener når der vælges en ny alder
+    sizeSelect.addEventListener("change", updatePrice);
+    sizeSelect.addEventListener("change", updatePrice);
+    }
+  </script>
+
+<script>
+//JS på slider
   const track = document.querySelector(".carousel__track") as HTMLElement;
   const slides = Array.from(track.children);
   const nextButton = document.querySelector(".carousel__button--right");
