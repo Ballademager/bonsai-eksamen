@@ -3,8 +3,8 @@ const { databowl } = Astro.props;
 ---
 
 <div class="div1">
-  <a id="black" href="/bowlProduct">
-    <img src={databowl.imgsrc} alt={databowl.imgalt} />
+  <a id="black" class="hover" href="/bowlProduct">
+    <figure><img src={databowl.imgsrc} alt={databowl.imgalt} /></figure>
     <div class="padding">
       <div class="overskrift">
         <h3>{databowl.title}</h3>
@@ -16,6 +16,20 @@ const { databowl } = Astro.props;
   </a>
 
   <style>
+    figure {
+      overflow: hidden;
+    }
+    .hover figure img {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.8s ease-out;
+    }
+    .hover:hover img,
+    .hover:focus img {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
     #varianter {
       padding-top: 3%;
       text-decoration: underline 1px;
