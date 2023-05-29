@@ -164,15 +164,17 @@ const data = await fetch(url, {
   h2 {
     text-align: center;
   }
-  .tree_speci {
+  p {
+    max-width: 80vw;
+  }
+  /* .tree_speci {
     display: grid;
-    /* max-width: 80vw; */
     justify-items: center;
     margin-block: var(--space-lg);
   }
   .tree_speci img {
     width: 75vw;
-  }
+  } */
   .toolcard div {
     margin-top: var(--space-xs);
   }
@@ -211,6 +213,12 @@ const data = await fetch(url, {
   }
   .pilned {
     display: none;
+  }
+  .tree_section {
+    display: grid;
+    max-width: 80vw;
+    gap: var(--space-md);
+    margin-block: var(--space-md);
   }
   @media (min-width: 750px) {
     .pilned {
@@ -319,7 +327,7 @@ const data = await fetch(url, {
       gap: var(--space-xl);
       margin-block: var(--space-lg);
     }
-    .tree_speci {
+    /* .tree_speci {
       display: flex;
       flex-direction: column;
       justify-items: start;
@@ -337,7 +345,7 @@ const data = await fetch(url, {
     }
     .tree_speci img {
       width: 75vw;
-    }
+    } */
     .dividerline {
       width: 80%;
       margin-top: calc(var(--space-xl) * 1.5);
@@ -433,19 +441,19 @@ const data = await fetch(url, {
       /* top: -200px; */
     }
 
-    .tree_speci img {
+    /* .tree_speci img {
       width: 80vw;
-    }
+    } */
 
     p {
       max-width: 75vw;
     }
-    .tree_speci p {
+    /* .tree_speci p {
       text-align: left;
     }
     .tree_speci :is(h3, h4, p) {
       margin-inline: var(--space-xs);
-    }
+    } */
     .shop_section {
       display: flex;
       flex-direction: column;
