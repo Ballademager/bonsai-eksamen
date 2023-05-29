@@ -4,8 +4,8 @@ const { data , size} = Astro.props;
 ---
 
 <div data-size={size}>
-  <a href="/japanskLigusterTree/"
-    ><img src={data.imgsrc} alt={data.imgalt} />
+  <a class="hover" href="/japanskLigusterTree/"
+    ><figure><img src={data.imgsrc} alt={data.imgalt} /></figure>
     <h3>{data.title}</h3>
     <h4>{data.latin}</h4>
     <h5>{data.description}</h5></a
@@ -22,8 +22,28 @@ const { data , size} = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     color: var(--almost-black);
   }
+  figure {
+    overflow: hidden;
+  }
+  /* a:hover {
+    opacity: .9;
+      }
+  a:hover img {
+        transform: zoom(1.1);
+  } */
+  .hover figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .4s ease-out;
+}
+.hover:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
   h3,
   h4 {
     color: var(--green);
