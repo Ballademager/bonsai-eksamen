@@ -62,36 +62,50 @@ const data = await fetch(url, {
       pålidelig kilde til bonsai-materialer af høj kvalitet.
     </p>
     <section class="shop_section">
-      <div class="toolcard">
-        <img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" />
+      <a href="/bowlProduct/" class="toolcard hover">
+        <figure><img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" /></figure>
         <div class="space_b">
           <h3 class="space_b">Bonsaiskål</h3><span>Pris 169,-</span>
         </div>
-        <p>Sort plettet bonsaiskål med huller i bunden</p>
-      </div>
-      <div class="toolcard">
-        <img src="/img/saks_1.webp" alt="Billede af en saks" />
+        <h5>Sort plettet bonsaiskål med huller i bunden</h5>
+      </a>
+      <a href="/" class="toolcard hover">
+        <figure><img src="/img/saks_1.webp" alt="Billede af en saks" /></figure>
         <div class="space_b">
           <h3 class="space_b">Bonsaisaks</h3><span>Pris 349,-</span>
         </div>
-        <p>Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det grønne.</p>
-      </div>
-      <div class="toolcard">
-        <img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" />
+        <h5>Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det grønne.</h5>
+      </a>
+      <a href="/bowlProduct/" class="toolcard hover">
+        <figure><img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" /></figure>
         <div class="space_b"><h3 class="space_b">Bonsaiskål</h3><span>Pris 239,-</span></div>
-        <p>Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.</p>
-      </div>
-      <div class="toolcard">
-        <img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" />
+        <h5>Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.</h5>
+      </a>
+      <a href="" class="toolcard hover">
+        <figure><img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" /></figure>
         <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span></div>
-        <p>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</p>
-      </div>
+        <h5>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</h5>
+      </a>
     </section>
     <OrangeButton link="/shop/" linktext="SHOP" />
   </main>
 </Layout>
 
 <style>
+  .hover img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.8s ease-out;
+  }
+  figure {
+    overflow: hidden;
+  }
+  .hover:hover img,
+  .hover:focus img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
   main {
     position: relative;
     margin-bottom: var(--space-md);
@@ -191,10 +205,14 @@ const data = await fetch(url, {
     font-size: var(--fs-4w);
     font-family: var(--ff-cta);
   }
-  .toolcard p {
+  .toolcard h5 {
     margin-top: var(--space-xs);
+    color: var(--almost-black);
+    font-family: var(--ff-text);
+    font-weight: var(--fw-l);
+    font-size: var(--fs-p);
   }
-  .toolcard :is(p, div) {
+  .toolcard :is(h5, div) {
     padding-inline: var(--space-xs);
   }
   .toolcard:last-of-type {
@@ -365,7 +383,7 @@ const data = await fetch(url, {
       margin-inline: 0;
       margin-top: 0;
     }
-    .toolcard :is(div, p) {
+    .toolcard :is(div, h5) {
       padding-inline: var(--space-xxs);
       /* display: flex; */
       /* flex-direction: column; */
@@ -374,8 +392,9 @@ const data = await fetch(url, {
       padding-inline: 0;
     } */
 
-    .toolcard p {
+    .toolcard h5 {
       text-align: start;
+      font-size: var(--fs-n);
     }
   }
   @media (750px < width < 1175px) {
@@ -462,7 +481,7 @@ const data = await fetch(url, {
     .toolcard {
       width: 65vw;
     }
-    .toolcard p {
+    .toolcard h5 {
       text-align: start;
     }
     .splash {

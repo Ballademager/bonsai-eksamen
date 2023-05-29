@@ -3,8 +3,8 @@
 
 <div>
   <div class="div1">
-    <a id="black" href="">
-      <img src="/img/bluepot2.webp" alt="" />
+    <a id="black" class="hover" href="">
+      <figure><img src="/img/bluepot2.webp" alt="" /></figure>
       <div class="padding">
         <div class="overskrift">
           <h3>Bonsaiskål</h3>
@@ -17,6 +17,20 @@
 </div>
 
 <style>
+  figure {
+    overflow: hidden;
+  }
+  .hover figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.8s ease-out;
+  }
+  .hover:hover img,
+  .hover:focus img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
   .padding {
     padding: 2%;
   }
