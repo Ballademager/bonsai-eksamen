@@ -23,21 +23,27 @@ import Layout from "../layout/Layout.astro";
     <img src="/img/holding_tree.webp" alt="Billede af bonsaitræ der holdes i af en person" />
   </section>
   <section class="history">
-    <h2>Historie</h2>
-    <p>
-      Bonsai Hjørnet blev grundlagt i 2010 af Peter Røssel, en erfaren bonsaidyrker med mange års erfaring og ekspertise. Peter blev fascineret af bonsaitræernes skønhed, æstetik og den dybe forbindelse mellem natur og menneske. Han ønskede at skabe
-      et sted, hvor folk kunne finde alt, hvad de behøver for at begynde deres egen bonsairejse.
-    </p>
-    <img src="/img/history1.webp" alt="Billede af butikken, Bonsaihjørnet" />
-    <p>
-      I november 2013 åbnede vi bonsaihjørnet.dk og blev hurtigt en anerkendt kilde til bonsaividen og forsyninger i Danmark. Vores mål har altid været at formidle primært stuebonsai til alle danskere og give vores kunder den bedste oplevelse og
-      kvalitet.
-    </p>
-    <img src="/img/history2w.webp" alt="Billede af butikken, Bonsaihjørnet" />
-    <p>
-      Vi arbejder hele tiden på at forbedre kvaliteten af vores bonsaitræer. Hver træart bliver nøje udvalgt for at sikre, at de er levedygtige og egner sig godt til at blive dyrket som bonsai. Hvis vi selv støder på problemer med at få en art til at
-      trives, tager vi det som et tegn på, at det samme kan ske for vores kunder, og vi indstiller derfor hurtigt salget af disse arter. Samtidig er vi altid på udkig efter nye og spændende bonsaitræerer at tilføje til vores sortiment.
-    </p>
+    <div class="left">
+      <h2>Historie</h2>
+      <p>
+        Bonsai Hjørnet blev grundlagt i 2010 af Peter Røssel, en erfaren bonsaidyrker med mange års erfaring og ekspertise. Peter blev fascineret af bonsaitræernes skønhed, æstetik og den dybe forbindelse mellem natur og menneske. Han ønskede at
+        skabe et sted, hvor folk kunne finde alt, hvad de behøver for at begynde deres egen bonsairejse.
+      </p>
+      <img src="/img/history1.webp" alt="Billede af butikken, Bonsaihjørnet" />
+      <p>
+        I november 2013 åbnede vi bonsaihjørnet.dk og blev hurtigt en anerkendt kilde til bonsaividen og forsyninger i Danmark. Vores mål har altid været at formidle primært stuebonsai til alle danskere og give vores kunder den bedste oplevelse og
+        kvalitet.
+      </p>
+      <img src="/img/history2w.webp" alt="Billede af butikken, Bonsaihjørnet" />
+      <p>
+        Vi arbejder hele tiden på at forbedre kvaliteten af vores bonsaitræer. Hver træart bliver nøje udvalgt for at sikre, at de er levedygtige og egner sig godt til at blive dyrket som bonsai. Hvis vi selv støder på problemer med at få en art til
+        at trives, tager vi det som et tegn på, at det samme kan ske for vores kunder, og vi indstiller derfor hurtigt salget af disse arter. Samtidig er vi altid på udkig efter nye og spændende bonsaitræerer at tilføje til vores sortiment.
+      </p>
+    </div>
+    <div class="imgdiv">
+      <!-- <img src="/img/history1.webp" alt="Billede af butikken, Bonsaihjørnet" /> -->
+      <img src="/img/history2.webp" alt="Billede af butikken, Bonsaihjørnet" />
+    </div>
   </section>
   <div class="line"></div>
   <section class="last">
@@ -97,6 +103,9 @@ import Layout from "../layout/Layout.astro";
   }
   .history {
     gap: var(--space-md);
+  }
+  .imgdiv {
+    display: none;
   }
   .last {
     display: grid;
@@ -166,6 +175,8 @@ import Layout from "../layout/Layout.astro";
     .goal img {
       order: -1;
       justify-self: end;
+      max-height: 60vh;
+      opacity: 1;
     }
     .goal div {
       align-content: center;
@@ -173,8 +184,44 @@ import Layout from "../layout/Layout.astro";
       gap: var(--space-lg);
     }
     .goal p {
-      max-width: 30vw;
+      max-width: max(400px, 30vw);
     }
+    .history img:not(.imgdiv img) {
+      display: none;
+    }
+    .history {
+      grid-template-columns: 1fr 1fr;
+    }
+    .left {
+      display: grid;
+      align-self: center;
+      max-width: 35vw;
+      justify-self: end;
+      gap: var(--space-md);
+    }
+    .imgdiv {
+      display: grid;
+      justify-content: start;
+    }
+    .imgdiv img {
+      max-width: 35vw;
+    }
+    /* .history img:nth-of-type(1),
+    .history img:nth-of-type(2) {
+      display: none;
+    } */
+    /* .history img:first-of-type {
+      grid-area: 1/2/3/3;
+      max-width: 40vw;
+    }
+    .history img:nth-of-type(2) {
+      grid-area: 3/2/5/3;
+      max-width: 40vw;
+    }
+    .history h2 {
+      grid-area: 1/1/2/2;
+      align-self: end;
+    } */
 
     .pilned {
       position: absolute;
@@ -217,7 +264,11 @@ import Layout from "../layout/Layout.astro";
   @media (750px < width < 930px) {
   }
   @media (750px < width < 1190px) {
-    .om img;
+    .goal {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+    }
   }
   @media (500px < width < 750px) {
   }
