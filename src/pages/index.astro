@@ -4,7 +4,8 @@ import Layout from "../layout/Layout.astro";
 import TreeCard from "../components/TreeCard.astro";
 
 const url = "https://bcjykukoxzsusmoltaky.supabase.co/rest/v1/bonsaitrees";
-const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjanlrdWtveHpzdXNtb2x0YWt5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwMTg3ODYsImV4cCI6MjAwMDU5NDc4Nn0.AD5gYYbHDUkLyrwBcKhI3TJgXTSqIj9SSYw9TvhA7kA";
+const api =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjanlrdWtveHpzdXNtb2x0YWt5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwMTg3ODYsImV4cCI6MjAwMDU5NDc4Nn0.AD5gYYbHDUkLyrwBcKhI3TJgXTSqIj9SSYw9TvhA7kA";
 
 const data = await fetch(url, {
   method: "GET",
@@ -20,14 +21,20 @@ const data = await fetch(url, {
       <h1>Bonsaihjørnet</h1>
       <h2>Hos os har du tid til at fordybe dig</h2>
       <p>
-        Få naturens skønhed ind i dit hjem med vores eksklusive udvalg af bonsaitræer. <br /> Skab fred og harmoni med disse bonsai træer, der udstråler elegance og styrke.
+        Få naturens skønhed ind i dit hjem med vores eksklusive udvalg af
+        stuebonsai. <br /> Skab fred og harmoni med disse bonsai træer, der udstråler
+        elegance og styrke.
       </p>
       <!-- <a href="#velkommen" class="pilned"><div></div><div></div></a> -->
       <a href="#velkommen" class="pilned"><img src="/img/pil.svg" alt="" /></a>
     </div>
     <h2 id="velkommen">Velkommen</h2>
     <img class="gren" src="/img/gren.svg" alt="figur af bonsaigren" />
-    <p>Hej og velkommen til Bonsaihjørnet.dk! Opdag skønheden i bonsai-træer hos os. Vi tilbyder et udvalg af unikke bonsaitræer der bringer naturens skønhed og harmoni ind i dit hjem eller kontor.</p>
+    <p>
+      Hej og velkommen til Bonsaihjørnet.dk! Opdag skønheden i bonsai-træer hos
+      os. Vi tilbyder et udvalg af unikke bonsaitræer der bringer naturens
+      skønhed og harmoni ind i dit hjem eller kontor.
+    </p>
     <section class="tree_section">
       {
         data.slice(0, 3).map((treecard) => {
@@ -58,12 +65,17 @@ const data = await fetch(url, {
     <h2>Shop</h2>
     <img class="gren" src="/img/gren.svg" alt="figur af bonsaigren" />
     <p>
-      I vores shop finder du et fantastisk udvalg af bonsaitræer og tilbehør til at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde dig de bedste produkter til at pleje og dyrke dine bonsaitræer, og vi er stolte af at være en
-      pålidelig kilde til bonsai-materialer af høj kvalitet.
+      I vores shop finder du et fantastisk udvalg af bonsaitræer og tilbehør til
+      at skabe din helt egen miniature-have. Vi er dedikerede til at tilbyde dig
+      de bedste produkter til at pleje og dyrke dine bonsaitræer, og vi er
+      stolte af at være en pålidelig kilde til bonsai-materialer af høj
+      kvalitet.
     </p>
     <section class="shop_section">
       <a href="/bowlProduct/" class="toolcard hover">
-        <figure><img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" /></figure>
+        <figure>
+          <img src="/img/skål_1.webp" alt="Billede af en bonsaiskål" />
+        </figure>
         <div class="space_b">
           <h3 class="space_b">Bonsaiskål</h3><span>Pris 169,-</span>
         </div>
@@ -74,17 +86,33 @@ const data = await fetch(url, {
         <div class="space_b">
           <h3 class="space_b">Bonsaisaks</h3><span>Pris 349,-</span>
         </div>
-        <h5>Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det grønne.</h5>
+        <h5>
+          Solid bonsaisaks af høj kvalitet, som klarer både små grene og alt det
+          grønne.
+        </h5>
       </a>
       <a href="/bowlProduct/" class="toolcard hover">
-        <figure><img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" /></figure>
-        <div class="space_b"><h3 class="space_b">Bonsaiskål</h3><span>Pris 239,-</span></div>
-        <h5>Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.</h5>
+        <figure>
+          <img src="/img/skål_2.webp" alt="Billede af en bonsaiskål" />
+        </figure>
+        <div class="space_b">
+          <h3 class="space_b">Bonsaiskål</h3><span>Pris 239,-</span>
+        </div>
+        <h5>
+          Grøn firkantet bonsaiskål uden underskål. Fås i flere størrelser.
+        </h5>
       </a>
       <a href="" class="toolcard hover">
-        <figure><img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" /></figure>
-        <div class="space_b"><h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span></div>
-        <h5>Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de mindste grene.</h5>
+        <figure>
+          <img src="/img/saks_2.webp" alt="Billede af en bonsaisaks" />
+        </figure>
+        <div class="space_b">
+          <h3 class="space_b">Bonsaisaks</h3><span>Pris 179,-</span>
+        </div>
+        <h5>
+          Bonsaisaks af høj kvalitet, som egner sig til klipning af blade og de
+          mindste grene.
+        </h5>
       </a>
     </section>
     <OrangeButton link="/shop/" linktext="SHOP" />
