@@ -52,7 +52,7 @@ import Layout from "../layout/Layout.astro";
 
       <div class="size">
         <p id="displayed_price">79,00 DKK</p>
-        <p id="displayed_size">Størrelse: S (17cm x 13,5cm x 8,5cm)</p>        
+        <p id="displayed_size">Størrelse: S (17cm x 13,5cm x 8,5cm)</p>
       </div>
       <p>Vælg størrelse:</p>
       <form action="">
@@ -109,7 +109,7 @@ padding-bottom: 8%;
 }
 
 #displayed_price{font-size: var(--fs-4);
-    font-family: 
+    font-family:
 font-weight: ;}
 
 /*knap*/
@@ -139,6 +139,9 @@ form {
     border: none;
     padding-block: calc(var(--space-xs)*.8);
   }
+  form select:hover, form button:hover {
+  cursor: pointer;
+}¨
 
 /*slider*/
   .carousel {
@@ -230,7 +233,7 @@ form {
 .work{width: 50%;
 height: 40%;
 object-fit: cover;}
-   
+
     main{padding-left: 6%;
     padding-right: 6%;
 padding-top: 4%;
@@ -278,7 +281,7 @@ padding-left: 10%;;
 
 p{font-size: var(--fs-n);}
 }
- 
+
 @media (min-width: 1450px) {
     .grid_1-1{height: 92vh;}
 
@@ -286,7 +289,7 @@ a{top: 0;}
 
 main{padding-bottom: 3%;}
 }
- 
+
 </style>
 
 
