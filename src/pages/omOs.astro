@@ -17,10 +17,11 @@ import Layout from "../layout/Layout.astro";
       <h2>Vores mål</h2>
       <p>
         Vores mål er at gøre bonsai sjovt, nemt og tilgængeligt for alle. Uanset om du er en erfaren bonsaigartner eller nybegynder, er du velkommen i vores bonsaifællesskab. Vi tror på at skabe en afslappet og venlig atmosfære, hvor vi kan dele
-        vores passion og lære af hinanden.
+        vores passion og lære af hinanden. Vi tror på at pasning af bonsaitræer kan give os meget som mennesker og det kan være en kilde til at opnå fordybelse, velvære og ro. Vi tror på at pasning af bonsaitræer kan give os meget som mennesker og
+        det kan være en kilde til at opnå fordybelse, velvære og ro.
       </p>
     </div>
-    <img src="/img/holding_tree.webp" alt="Billede af bonsaitræ der holdes i af en person" />
+    <img src="/img/fordybelse.webp" alt="Billede af bonsaitræ der holdes i af en person" />
   </section>
   <section class="history">
     <div class="left">
@@ -187,7 +188,10 @@ import Layout from "../layout/Layout.astro";
     .goal div {
       align-content: center;
       justify-self: start;
-      gap: var(--space-lg);
+      gap: var(--space-sm);
+    }
+    .goal h2 {
+      margin-block: var(--space-xs);
     }
     .goal p {
       max-width: max(400px, 30vw);
