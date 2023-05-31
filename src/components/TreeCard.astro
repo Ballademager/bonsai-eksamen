@@ -1,15 +1,15 @@
 ---
 const { data , size} = Astro.props;
-// const { imagesource, imagealt, treetitle, latinname, treedescription } = Astro.props;
 ---
 
 <div data-size={size}>
-  <a class="hover" href="/japanskLigusterTree/"
-    ><figure><img src={data.imgsrc} alt={data.imgalt} /></figure>
+  <a class="hover" href="/japanskLigusterTree/">
+    <figure>
+      <img src={data.imgsrc} alt={data.imgalt} />
+    </figure>
     <h3>{data.title}</h3>
     <h4>{data.latin}</h4>
-    <h5>{data.description}</h5></a
-  >
+    <h5>{data.description}</h5></a>
 </div>
 
 <style>
